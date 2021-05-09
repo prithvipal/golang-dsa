@@ -57,6 +57,8 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Operation in Array</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#search-unsorted-array">Search (unsorted array)</a>
+    </li>
     </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../largest_ele/">Largest Element in Array</a>
@@ -103,6 +105,32 @@
             <div class="section">
               
                 <h1 id="operations">Operations</h1>
+<h2 id="search-unsorted-array">Search (unsorted array)</h2>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    arr := []int{10, 3, 6, 14, 17}
+    result := search(arr, 14)
+    if result == -1 {
+        fmt.Println(&quot;Element not found&quot;)
+    } else {
+        fmt.Println(&quot;Element found at index:&quot;, result)
+    }
+
+}
+
+func search(arr []int, ele int) int {
+    for i := 0; i &lt; len(arr); i++ {
+        if arr[i] == ele {
+            return i
+        }
+    }
+    return -1
+}
+</code></pre>
+<p><strong>Time Complexity:</strong> O(n)</p>
               
             </div>
           </div>
