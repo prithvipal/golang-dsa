@@ -1,4 +1,4 @@
-site_name: MkLorum
+site_name: Data Structures and Algorithms using Golang
 nav:
     - Home: index.md
     - About: about.md
