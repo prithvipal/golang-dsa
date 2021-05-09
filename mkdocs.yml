@@ -1,5 +1,9 @@
 site_name: Data Structures and Algorithms using Golang
 nav:
     - Home: index.md
+    - Arrays:
+        - Introduction: array/intro.md
+        - Operation in Array: array/operations.md
+        - Largest Element in Array: array/largest_ele.md
     - About: about.md
 theme: readthedocs
