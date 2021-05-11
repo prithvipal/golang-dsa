@@ -4,6 +4,7 @@ nav:
     - Arrays:
         - Introduction: array/intro.md
         - Operation in Array: array/operations.md
-        - Largest Element in Array: array/largest_ele.md
+        - Largest Element in Array: array/largest_element.md
+        - Second Largest Element in Array: array/second_largest_element.md
     - About: about.md
 theme: readthedocs
