@@ -118,6 +118,32 @@
 <p><strong>Input:</strong> arr[] = {33, 22, 9, 3, 99} </br>
 <strong>Output:</strong> arr[] = {99, 3, 9, 22, 33}</p>
 <h2 id="approach-one">Approach One</h2>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func main() {
+    arr := []int{12, 7, 9, 33} // [33 9 7 12]
+    // arr := []int{33, 22, 9, 3, 99} // [99 3 9 22 33
+    reserveArray(arr)
+    fmt.Println(arr)
+
+}
+
+func reserveArray(arr []int) {
+    low := 0
+    high := len(arr) - 1
+    for low &lt; high {
+        temp := arr[low]
+        arr[low] = arr[high]
+        arr[high] = temp
+        low++
+        high--
+    }
+}
+</code></pre>
 <p><strong>Time Complexity:</strong>: &theta;(n) <br>
 <strong>Aux Space:</strong> &theta;(1)</p>
 <h2 id="approach-two">Approach Two</h2>
