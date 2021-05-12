@@ -8,5 +8,6 @@ nav:
         - Second Largest Element in Array: array/second_largest_element.md
         - Check If Array is Sorted: array/is_array_sorted.md
         - Reverse an Array: array/reverse_array.md
+        - Remove Duplicate from Sorted Array: array/remove_duplicates_from_sorted_array.md
     - About: about.md
 theme: readthedocs
