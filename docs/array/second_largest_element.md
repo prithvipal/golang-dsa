@@ -102,3 +102,5 @@ func getSecondLargest(arr []int) int {
 	return second
 }
 ```
+
+**Time Complexity:** O(n)
