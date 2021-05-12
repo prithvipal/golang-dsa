@@ -8,6 +8,33 @@
 
 ## Approach One
 
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	arr := []int{12, 7, 9, 33} // [33 9 7 12]
+	// arr := []int{33, 22, 9, 3, 99} // [99 3 9 22 33
+	reserveArray(arr)
+	fmt.Println(arr)
+
+}
+
+func reserveArray(arr []int) {
+	low := 0
+	high := len(arr) - 1
+	for low < high {
+		temp := arr[low]
+		arr[low] = arr[high]
+		arr[high] = temp
+		low++
+		high--
+	}
+}
+```
 
 **Time Complexity:**: &theta;(n) <br>
 **Aux Space:** &theta;(1)
