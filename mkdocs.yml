@@ -6,5 +6,6 @@ nav:
         - Operation in Array: array/operations.md
         - Largest Element in Array: array/largest_element.md
         - Second Largest Element in Array: array/second_largest_element.md
+        - Check If Array is Sorted: array/is_array_sorted.md
     - About: about.md
 theme: readthedocs
