@@ -162,6 +162,16 @@ func getSecondLargest(arr []int) int {
 }
 </code></pre>
 <h2 id="efficient-approach">Efficient Approach</h2>
+<ul>
+<li>arr[i] &gt; arr[largest]: res = largest, largest = i</li>
+<li>arr[i] == arr[largest]: Ignore</li>
+<li>arr[i] &lt; arr[largest]:<ul>
+<li>res == -1: res = i</li>
+<li>arr[i] &lt;= arr[res]: Ignore</li>
+<li>arr[i] &gt; arr[res]: res = i</li>
+</ul>
+</li>
+</ul>
 <pre><code>package main
 
 import (
