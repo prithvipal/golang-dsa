@@ -60,6 +60,13 @@ func getSecondLargest(arr []int) int {
 
 ## Efficient Approach
 
+- arr[i] > arr[largest]: res = largest, largest = i
+- arr[i] == arr[largest]: Ignore
+- arr[i] < arr[largest]:
+	- res == -1: res = i
+	- arr[i] <= arr[res]: Ignore
+	- arr[i] > arr[res]: res = i
+
 ```
 package main
 
