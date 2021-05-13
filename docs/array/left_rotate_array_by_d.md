@@ -46,6 +46,9 @@ func leftRotateOne(arr []int) {
 }
 ```
 
+**Time Complexity:** &theta;(n * d) <br>
+**Aux Space:** &theta;(1)
+
 ## Better Approach
 
 ```
@@ -79,6 +82,14 @@ func leftRotate(arr []int, d int) {
 	}
 }
 ```
+
+**Time Complexity:** &theta;(d+ (n-d) + d)
+= &theta;(n+d)
+= &theta;(n) </br>
+d is smaller than n so ignore d
+
+**Aux Space:** &theta;(d)
+
 
 ## Best Approach
 
@@ -115,3 +126,9 @@ func leftRotate(arr []int, d int) {
 	reverve(arr, 0, len(arr)-1)
 }
 ```
+
+**Time Complexity:** &theta;(d + (n-d) + n)
+= &theta;(2n)
+= &theta;(n)
+
+**Aux Space:** &theta;(1)
