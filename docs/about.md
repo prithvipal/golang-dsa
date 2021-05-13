@@ -5,6 +5,6 @@ Prithvipal Singh is software engineer having more than 8 years of experience. He
 ## Social Media
 Let us connect.
 
-- **LinkedIn:** 
+- **LinkedIn:** https://www.linkedin.com/in/prithvipal-singh-2a7b4b49/
 - **Twiter:** https://twitter.com/prithvirathor99
 
