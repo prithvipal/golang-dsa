@@ -16,3 +16,36 @@
     :: here can not consider 11 of 1st index. we can condier 11 of 3rd index.
 
 
+## Naive Approach
+
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	arr := []int{17, 20, 14, 13, 16, 15, 12}
+	leader(arr)
+}
+
+func leader(arr []int) {
+	for i := 0; i < len(arr); i++ {
+		flag := false
+		for j := i + 1; j < len(arr); j++ {
+			if arr[i] <= arr[j] {
+				flag = true
+				break
+			}
+		}
+		if !flag {
+			fmt.Printf("%d ", arr[i])
+		}
+	}
+	fmt.Println()
+}
+```
+
+**Time Complexity:** O(n * n)
+
