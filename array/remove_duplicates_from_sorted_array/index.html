@@ -69,6 +69,8 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#naive-approach">Naive Approach</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#efficient-approach">Efficient Approach</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -122,6 +124,67 @@ length: 3 </br>
 <strong>Output:</strong> arr[] = {16} </br>
 length: 1</p>
 <h2 id="naive-approach">Naive Approach</h2>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func main() {
+    // arr := []int{12, 15, 15, 20, 20, 20, 20} // [12 15 20]
+    arr := []int{16, 16, 16} // [16]
+    result := removeDups(arr)
+    fmt.Println(&quot;arr[] =&quot;, result)
+    fmt.Println(&quot;length =&quot;, len(result))
+}
+
+func removeDups(arr []int)  []int {
+    var temp []int
+    temp = append(temp, arr[0])
+    result := 1
+    for i := 1; i &lt; len(arr); i++ {
+        if temp[result-1] != arr[i] {
+            temp = append(temp, arr[i])
+            result++
+        }
+    }
+    for i := 0; i &lt; result; i++ {
+        arr[i] = temp[i]
+    }
+    return arr[:result]
+}
+</code></pre>
+<p><strong>Time Complexity:</strong> O(n)
+<strong>Space Complexity:</strong> O(n)</p>
+<h2 id="efficient-approach">Efficient Approach</h2>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func main() {
+    // arr := []int{12, 15, 15, 20, 20, 20, 20} // [12 15 20]
+    arr := []int{16, 16, 16} // [16]
+    result := removeDups(arr)
+    fmt.Println(&quot;arr[] =&quot;, result)
+    fmt.Println(&quot;length =&quot;, len(result))
+}
+
+func removeDups(arr []int) []int {
+    result := 1
+    for i := 1; i &lt; len(arr); i++ {
+        if arr[i] != arr[result-1] {
+            arr[result] = arr[i]
+            result++
+        }
+    }
+    return arr[:result]
+}
+</code></pre>
+<p><strong>Time Complexity:</strong> O(n)
+<strong>Space Complexity:</strong> O(1)</p>
+<p><strong>Note:</strong> we are using <code>result</code> variable to keep track to unique elements in array.</p>
               
             </div>
           </div>
