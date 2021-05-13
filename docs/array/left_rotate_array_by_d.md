@@ -12,6 +12,9 @@ d = 3 </br>
 **Output:** </br>
 arr[] = {19, 11, 15, 33}
 
+
+- We may assume that d <= No of elements in array
+- If d > no of elements in array then we can simply d = d-n 
 ## Naive Approach
 
 ```
