@@ -13,5 +13,6 @@ nav:
         - Left Rotate Array by One: array/left_rotate_array_by_one.md
         - Left Rotate Array by d:  array/left_rotate_array_by_d.md
         - Leaders in Array: array/leaders_in_array.md
+        - Maximum Difference: array/maximum_difference.md
     - About: about.md
 theme: readthedocs
