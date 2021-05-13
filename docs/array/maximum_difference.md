@@ -52,3 +52,51 @@ func max(a, b int) int {
 	return b
 }
 ```
+
+**Time complexity:** &theta;(n * n)
+
+## Efficient Approach
+
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	arr := []int{3, 4, 11, 7, 5, 9, 1} // 8
+	// arr := []int{8, 10, 6, 7, 4, 2} // 2
+	// arr := []int{20, 30, 40} // 20
+	// arr := []int{40, 30, 6, 4} // -2
+	result := maxDiff(arr)
+	fmt.Println(result)
+}
+
+func maxDiff(arr []int) int {
+	result := arr[1] - arr[0]
+	minVal := arr[0]
+	for i := 1; i < len(arr); i++ {
+		result = max(result, arr[i]-minVal)
+		minVal = min(minVal, arr[i])
+	}
+	return result
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+```
+
+**Time Complexity:** &theta;(n) <br>
+**Aux Space:** &theta;(1)
