@@ -27,7 +27,7 @@ func main() {
 	fmt.Println("length =", len(result))
 }
 
-func removeDups(arr []int) (resultArr []int) {
+func removeDups(arr []int)  []int {
 	var temp []int
 	temp = append(temp, arr[0])
 	result := 1
@@ -47,3 +47,36 @@ func removeDups(arr []int) (resultArr []int) {
 **Time Complexity:** O(n)
 **Space Complexity:** O(n)
 
+## Efficient Approach
+
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// arr := []int{12, 15, 15, 20, 20, 20, 20} // [12 15 20]
+	arr := []int{16, 16, 16} // [16]
+	result := removeDups(arr)
+	fmt.Println("arr[] =", result)
+	fmt.Println("length =", len(result))
+}
+
+func removeDups(arr []int) []int {
+	result := 1
+	for i := 1; i < len(arr); i++ {
+		if arr[i] != arr[result-1] {
+			arr[result] = arr[i]
+			result++
+		}
+	}
+	return arr[:result]
+}
+```
+
+**Time Complexity:** O(n)
+**Space Complexity:** O(1)
+
+**Note:** we are using `result` variable to keep track to unique elements in array.
