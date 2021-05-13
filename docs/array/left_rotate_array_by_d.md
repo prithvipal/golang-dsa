@@ -80,3 +80,38 @@ func leftRotate(arr []int, d int) {
 }
 ```
 
+## Best Approach
+
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// arr := []int{11, 22, 33, 44, 55} // [33 44 55 11 22]
+	// leftRotate(arr, 2)
+	// fmt.Println(arr)
+
+	arr := []int{11, 15, 33, 19} // [19 11 15 33]
+	leftRotate(arr, 3)
+	fmt.Println(arr)
+
+}
+func reverve(arr []int, low, high int) {
+	for low < high {
+		temp := arr[low]
+		arr[low] = arr[high]
+		arr[high] = temp
+		low++
+		high--
+	}
+}
+
+func leftRotate(arr []int, d int) {
+	reverve(arr, 0, d-1)
+	reverve(arr, d, len(arr)-1)
+	reverve(arr, 0, len(arr)-1)
+}
+```
