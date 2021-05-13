@@ -28,3 +28,6 @@ func leftRotateOn(arr []int) {
 	arr[len(arr)-1] = temp
 }
 ```
+
+**Time Complexity:** &theta;(n)
+**Space Complexity:** &theta;(1)
