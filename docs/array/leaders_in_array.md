@@ -7,7 +7,7 @@
 **Output:** {30}
 
 **Input:** arr[] = {25, 15, 10} </br>
-**Output:** {30}
+**Output:** {25, 15, 10}
 
 - Leader in an array is the element that there is no larger than the element to its right side.
 - Left most is always be leader because there is no large then that element to its right side.
@@ -26,7 +26,9 @@ import (
 )
 
 func main() {
-	arr := []int{17, 20, 14, 13, 16, 15, 12}
+	// arr := []int{17, 20, 14, 13, 16, 15, 12} // 20 16 15 12
+	// arr := []int{10, 20, 30} // 30
+	arr := []int{25, 15, 10}
 	leader(arr)
 }
 
@@ -48,4 +50,6 @@ func leader(arr []int) {
 ```
 
 **Time Complexity:** O(n * n)
+
+## Efficient Approach
 
