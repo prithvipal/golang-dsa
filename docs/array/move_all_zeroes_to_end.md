@@ -11,3 +11,38 @@
 
 ## Noive Approach
 
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// arr := []int{18, 13, 0, 30, 0, 40} // [18 13 40 30 0 0]
+	// arr := []int{0, 0, 0, 20, 0} // [20 0 0 0 0]
+	arr := []int{50, 66} // [50 66]
+	moveToEnd(arr)
+	fmt.Println(arr)
+}
+
+func moveToEnd(arr []int) {
+	for i := 0; i < len(arr); i++ {
+		if arr[i] == 0 {
+			for j := i + 1; j < len(arr); j++ {
+				if arr[j] != 0 {
+					arr[i], arr[j] = swap(arr[i], arr[j])
+				}
+			}
+		}
+	}
+}
+
+func swap(a, b int) (int, int) {
+	return b, a
+}
+```
+
+**Time Complexity:** O(n*n)
+
+
