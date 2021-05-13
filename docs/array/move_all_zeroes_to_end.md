@@ -8,3 +8,6 @@
 
 **Input:** arr[] = {50, 66} <br>
 **Output:** arr[] = {50, 66}
+
+## Noive Approach
+
