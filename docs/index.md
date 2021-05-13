@@ -1,17 +1,3 @@
-# Welcome to MkDocs
+# Data Structures and Algorithms using Golang
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+This explains **Data Structures and Algorithms using Golang** with hands on coding program with complexity(Time and Space). It does not explain theoretical concepts of DSA but providers different level(Naive, Efficient and More Efficient) of programming solution for problem statement.
