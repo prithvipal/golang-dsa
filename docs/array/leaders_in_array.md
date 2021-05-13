@@ -53,3 +53,36 @@ func leader(arr []int) {
 
 ## Efficient Approach
 
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	arr := []int{17, 20, 14, 13, 16, 15, 12} // 12 15 16 20
+	// arr := []int{10, 20, 30} // 30
+	// arr := []int{25, 15, 10} // 10 15 25
+	leader(arr)
+}
+
+func leader(arr []int) {
+	curLeader := arr[len(arr)-1]
+	fmt.Printf("%d ", curLeader)
+	for i := len(arr) - 2; i >= 0; i-- {
+		if curLeader < arr[i] {
+			curLeader = arr[i]
+			fmt.Printf("%d ", curLeader)
+		}
+	}
+	fmt.Println()
+}
+```
+
+**Time Complexity:** &theta;(n)
+
+**Note:**
+
+- It will print leaders in reverse order
+- If we want to print in same order as we have in array, then we can store leaders in a new array and then we can iterate new array in reverse order and print each element.
