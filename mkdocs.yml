@@ -9,6 +9,7 @@ nav:
         - Check If Array is Sorted: array/is_array_sorted.md
         - Reverse an Array: array/reverse_array.md
         - Remove Duplicate from Sorted Array: array/remove_duplicates_from_sorted_array.md
+        - Remove Duplicate from Unsorted Array: array/remove_duplicates_from_unsorted_array.md
         - Move All Zeroes to End: array/move_all_zeroes_to_end.md
         - Left Rotate Array by One: array/left_rotate_array_by_one.md
         - Left Rotate Array by d:  array/left_rotate_array_by_d.md
