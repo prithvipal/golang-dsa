@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Remove Duplicate from Sorted Array - Data Structures and Algorithms using Golang</title>
+  <title>Remove Duplicate from Unsorted Array - Data Structures and Algorithms using Golang</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Remove Duplicate from Sorted Array";
-    var mkdocs_page_input_path = "array/remove_duplicates_from_sorted_array.md";
+    var mkdocs_page_name = "Remove Duplicate from Unsorted Array";
+    var mkdocs_page_input_path = "array/remove_duplicates_from_unsorted_array.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -65,15 +65,13 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../reverse_array/">Reverse an Array</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Remove Duplicate from Sorted Array</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../remove_duplicates_from_sorted_array/">Remove Duplicate from Sorted Array</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Remove Duplicate from Unsorted Array</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#naive-approach">Naive Approach</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#efficient-approach">Efficient Approach</a>
+    <li class="toctree-l2"><a class="reference internal" href="#implementation">Implementation</a>
     </li>
     </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../remove_duplicates_from_unsorted_array/">Remove Duplicate from Unsorted Array</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../move_all_zeroes_to_end/">Move All Zeroes to End</a>
                     </li>
@@ -115,7 +113,7 @@
         
       
     
-    <li>Remove Duplicate from Sorted Array</li>
+    <li>Remove Duplicate from Unsorted Array</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -126,77 +124,30 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="remove-duplicates-from-sorted-array">Remove Duplicates from Sorted Array</h1>
-<p><strong>Input:</strong> arr[] = {12, 15, 15, 20, 20, 20, 20} </br>
-length: 7 </br>
-<strong>Output:</strong> arr[] = {12, 15, 20} </br>
-length: 3</p>
-<p><strong>Input:</strong> arr[] = {16, 16, 16} </br>
-length: 3 </br>
-<strong>Output:</strong> arr[] = {16} </br>
-length: 1</p>
-<h2 id="naive-approach">Naive Approach</h2>
+                <h1 id="remove-duplicates-from-un-sorted-array">Remove Duplicates from Un-sorted Array</h1>
+<h2 id="implementation">Implementation</h2>
 <pre><code>package main
 
-import (
-    &quot;fmt&quot;
-)
+import &quot;fmt&quot;
 
 func main() {
-    // arr := []int{12, 15, 15, 20, 20, 20, 20} // [12 15 20]
-    arr := []int{16, 16, 16} // [16]
+    arr := []int{10, 12, 8, 10, 12}
     result := removeDups(arr)
-    fmt.Println(&quot;arr[] =&quot;, result)
-    fmt.Println(&quot;length =&quot;, len(result))
-}
-
-func removeDups(arr []int)  []int {
-    var temp []int
-    temp = append(temp, arr[0])
-    result := 1
-    for i := 1; i &lt; len(arr); i++ {
-        if temp[result-1] != arr[i] {
-            temp = append(temp, arr[i])
-            result++
-        }
-    }
-    for i := 0; i &lt; result; i++ {
-        arr[i] = temp[i]
-    }
-    return arr[:result]
-}
-</code></pre>
-<p><strong>Time Complexity:</strong> O(n)
-<strong>Space Complexity:</strong> O(n)</p>
-<h2 id="efficient-approach">Efficient Approach</h2>
-<pre><code>package main
-
-import (
-    &quot;fmt&quot;
-)
-
-func main() {
-    // arr := []int{12, 15, 15, 20, 20, 20, 20} // [12 15 20]
-    arr := []int{16, 16, 16} // [16]
-    result := removeDups(arr)
-    fmt.Println(&quot;arr[] =&quot;, result)
-    fmt.Println(&quot;length =&quot;, len(result))
+    fmt.Println(result)
 }
 
 func removeDups(arr []int) []int {
-    result := 1
-    for i := 1; i &lt; len(arr); i++ {
-        if arr[i] != arr[result-1] {
-            arr[result] = arr[i]
-            result++
+    var tempArr []int
+    m := make(map[int]bool)
+    for _, ele := range arr {
+        if _, ok := m[ele]; !ok {
+            m[ele] = true
+            tempArr = append(tempArr, ele)
         }
     }
-    return arr[:result]
+    return tempArr
 }
 </code></pre>
-<p><strong>Time Complexity:</strong> O(n)
-<strong>Space Complexity:</strong> O(1)</p>
-<p><strong>Note:</strong> we are using <code>result</code> variable to keep track to unique elements in array.</p>
               
             </div>
           </div>
@@ -204,10 +155,10 @@ func removeDups(arr []int) []int {
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../remove_duplicates_from_unsorted_array/" class="btn btn-neutral float-right" title="Remove Duplicate from Unsorted Array">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../move_all_zeroes_to_end/" class="btn btn-neutral float-right" title="Move All Zeroes to End">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../reverse_array/" class="btn btn-neutral" title="Reverse an Array"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../remove_duplicates_from_sorted_array/" class="btn btn-neutral" title="Remove Duplicate from Sorted Array"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -233,10 +184,10 @@ func removeDups(arr []int) []int {
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../reverse_array/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../remove_duplicates_from_sorted_array/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../remove_duplicates_from_unsorted_array/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../move_all_zeroes_to_end/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
