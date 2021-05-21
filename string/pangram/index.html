@@ -133,7 +133,40 @@
               
                 <h1 id="check-if-a-string-is-pangram-or-not">Check if a String is Pangram or not</h1>
 <p>A string is pangram if string contain a-z / A-Z alphabets alteast once. You can ignore the case. You need to consider only english alphabets and the string may contain punctuation marks. Also, you need to return how number of letter are missing if it is not pangram.</p>
-<p>Example of angram string: The quick brown fox jumps over a lazy dog.</p>
+<p>Example of angram string: 
+1. The quick brown fox jumps over a lazy dog.
+2. Mr. Jock, TV quiz PhD., bags few lynx.</p>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;strings&quot;
+)
+
+func main() {
+    // str := &quot;The quick brown fox jumps over a lazy dog.&quot; // true 0
+    // str := &quot;Mr. Jock, TV quiz PhD., bags few lynx.&quot; // true 0
+    str := &quot;The quick brown fox jumps over the dog&quot; // false 4
+    result, count := isPangram(str)
+    fmt.Println(result, count)
+
+}
+
+func isPangram(str string) (bool, int) {
+    charMap := make(map[string]bool)
+    for _, ele := range str {
+        if (ele &gt;= 65 &amp;&amp; ele &lt;= 90) || (ele &gt;= 97 &amp;&amp; ele &lt;= 122) {
+            char := strings.ToLower(string(ele))
+            charMap[char] = true
+        }
+    }
+    if len(charMap) == 26 {
+        return true, 0
+    }
+    return false, 26 - len(charMap)
+}
+
+</code></pre>
               
             </div>
           </div>
