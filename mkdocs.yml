@@ -3,6 +3,7 @@ nav:
     - Home: index.md
     - String:
         - String is Palindrom: string/palindrom.md
+        - String is Pangram: string/pangram.md
     - Arrays:
         - Introduction: array/intro.md
         - Operation in Array: array/operations.md
