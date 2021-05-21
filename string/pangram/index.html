@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Introduction - Data Structures and Algorithms using Golang</title>
+  <title>String is Pangram - Data Structures and Algorithms using Golang</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Introduction";
-    var mkdocs_page_input_path = "array/intro.md";
+    var mkdocs_page_name = "String is Pangram";
+    var mkdocs_page_input_path = "string/pangram.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -52,43 +52,43 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">String</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../string/palindrom/">String is Palindrom</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../string/pangram/">String is Pangram</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Arrays</span></p>
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Introduction</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../palindrom/">String is Palindrom</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">String is Pangram</a>
     <ul class="current">
     </ul>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../operations/">Operation in Array</a>
+                </ul>
+                <p class="caption"><span class="caption-text">Arrays</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/intro/">Introduction</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../largest_element/">Largest Element in Array</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/operations/">Operation in Array</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../second_largest_element/">Second Largest Element in Array</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/largest_element/">Largest Element in Array</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../is_array_sorted/">Check If Array is Sorted</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/second_largest_element/">Second Largest Element in Array</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../reverse_array/">Reverse an Array</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/is_array_sorted/">Check If Array is Sorted</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../remove_duplicates_from_sorted_array/">Remove Duplicate from Sorted Array</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/reverse_array/">Reverse an Array</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../remove_duplicates_from_unsorted_array/">Remove Duplicate from Unsorted Array</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/remove_duplicates_from_sorted_array/">Remove Duplicate from Sorted Array</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../move_all_zeroes_to_end/">Move All Zeroes to End</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/remove_duplicates_from_unsorted_array/">Remove Duplicate from Unsorted Array</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../left_rotate_array_by_one/">Left Rotate Array by One</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/move_all_zeroes_to_end/">Move All Zeroes to End</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../left_rotate_array_by_d/">Left Rotate Array by d</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/left_rotate_array_by_one/">Left Rotate Array by One</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../leaders_in_array/">Leaders in Array</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/left_rotate_array_by_d/">Left Rotate Array by d</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../maximum_difference/">Maximum Difference</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/leaders_in_array/">Leaders in Array</a>
                     </li>
-                    <li class="toctree-l1"><a class="" href="../frequency_sorted_array.md">Frequency in Sorted Array</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../array/maximum_difference/">Maximum Difference</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../../array/frequency_sorted_array.md">Frequency in Sorted Array</a>
                     </li>
                 </ul>
                 <ul>
@@ -116,11 +116,11 @@
     
       
         
-          <li>Arrays &raquo;</li>
+          <li>String &raquo;</li>
         
       
     
-    <li>Introduction</li>
+    <li>String is Pangram</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -131,13 +131,9 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="introduction-of-array">Introduction of Array</h1>
-<p>Continuous memory allocation</p>
-<p><strong>Advantages</strong></p>
-<ul>
-<li>Random Access</li>
-<li>Cache friendliness</li>
-</ul>
+                <h1 id="check-if-a-string-is-pangram-or-not">Check if a String is Pangram or not</h1>
+<p>A string is pangram if string contain a-z / A-Z alphabets alteast once. You can ignore the case. You need to consider only english alphabets and the string may contain punctuation marks. Also, you need to return how number of letter are missing if it is not pangram.</p>
+<p>Example of angram string: The quick brown fox jumps over a lazy dog.</p>
               
             </div>
           </div>
@@ -145,10 +141,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../operations/" class="btn btn-neutral float-right" title="Operation in Array">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../array/intro/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../string/pangram/" class="btn btn-neutral" title="String is Pangram"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../palindrom/" class="btn btn-neutral" title="String is Palindrom"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -174,10 +170,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../string/pangram/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../palindrom/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../operations/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../array/intro/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
