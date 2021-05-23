@@ -7,6 +7,7 @@ Example of angram string:
 2. Mr. Jock, TV quiz PhD., bags few lynx.
 
 
+## Initial Solution
 ```
 package main
 
@@ -36,5 +37,47 @@ func isPangram(str string) (bool, int) {
 		return true, 0
 	}
 	return false, 26 - len(charMap)
+}
+```
+## Enhancement
+
+It should also show missing letters.
+
+```
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	// str := "The quick brown fox jumps over a lazy dog." // true []
+	// str := "Mr. Jock, TV quiz PhD., bags few lynx." // true []
+	str := "The quick brown fox jumps over the dog" // false [a l y z]
+	result, count := isPangram(str)
+	fmt.Println(result, count)
+
+}
+
+func isPangram(str string) (bool, []string) {
+	charMap := make(map[string]bool)
+	for _, ele := range str {
+		if (ele >= 'A' && ele <= 'Z') || (ele >= 'a' && ele <= 'z') {
+			char := strings.ToLower(string(ele))
+			charMap[char] = true
+		}
+	}
+	var missingAlpha []string
+	var i rune = 'a'
+	for ; i <= 'z'; i++ {
+		if !(charMap[string(i)]) {
+			missingAlpha = append(missingAlpha, string(i))
+		}
+	}
+	if len(missingAlpha) == 0 {
+		return true, missingAlpha
+	}
+	return false, missingAlpha
 }
 ```
