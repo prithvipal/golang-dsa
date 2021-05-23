@@ -144,9 +144,9 @@ import (
 )
 
 func main() {
-    // str := &quot;The quick brown fox jumps over a lazy dog.&quot; // true 0
+    str := &quot;The quick brown fox jumps over a lazy dog.&quot; // true 0
     // str := &quot;Mr. Jock, TV quiz PhD., bags few lynx.&quot; // true 0
-    str := &quot;The quick brown fox jumps over the dog&quot; // false 4
+    // str := &quot;The quick brown fox jumps over the dog&quot; // false 4
     result, count := isPangram(str)
     fmt.Println(result, count)
 
@@ -155,7 +155,7 @@ func main() {
 func isPangram(str string) (bool, int) {
     charMap := make(map[string]bool)
     for _, ele := range str {
-        if (ele &gt;= 65 &amp;&amp; ele &lt;= 90) || (ele &gt;= 97 &amp;&amp; ele &lt;= 122) {
+        if (ele &gt;= 'A' &amp;&amp; ele &lt;= 'Z') || (ele &gt;= 'a' &amp;&amp; ele &lt;= 'z') {
             char := strings.ToLower(string(ele))
             charMap[char] = true
         }
@@ -165,7 +165,6 @@ func isPangram(str string) (bool, int) {
     }
     return false, 26 - len(charMap)
 }
-
 </code></pre>
               
             </div>
