@@ -6,6 +6,8 @@ jobs:
   deploy_mk_docs:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v1
       - name: Install mkdocks
         run: pip install mkdocs
       - name: GitHub Deploy
