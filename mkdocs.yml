@@ -22,5 +22,7 @@ nav:
         - Leaders in Array: array/leaders_in_array.md
         - Maximum Difference: array/maximum_difference.md
         - Frequency in Sorted Array: array/frequency_sorted_array.md
+    - Sorting:
+        - Bubble Sort: sorting/bubble_sort.md
     - About: about.md
 theme: readthedocs
