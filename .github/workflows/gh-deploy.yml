@@ -12,3 +12,5 @@ jobs:
         run: pip install mkdocs
       - name: GitHub Deploy
         run: mkdocs gh-deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
