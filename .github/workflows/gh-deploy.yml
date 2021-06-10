@@ -1,0 +1,12 @@
+name: Deploy MkDocs on GitHub pages
+
+on: push
+
+jobs:
+  deploy_mk_docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install mkdocks
+        run: pip install mkdocs
+      - name: GitHub Deploy
+        run: mkdocs gh-deploy
