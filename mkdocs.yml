@@ -23,6 +23,7 @@ nav:
         - Maximum Difference: array/maximum_difference.md
         - Frequency in Sorted Array: array/frequency_sorted_array.md
     - Sorting:
+        - Introduction: sorting/introduction.md
         - Bubble Sort: sorting/bubble_sort.md
     - About: about.md
 theme: readthedocs
