@@ -100,6 +100,12 @@
                     <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Bubble Sort</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#naive-approach">Naive Approach</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#efficient-approach">Efficient Approach</a>
+    </li>
+    </ul>
                     </li>
                 </ul>
                 <ul>
@@ -142,7 +148,71 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="bubble-sort">Bubble Sort</h1>
+<ul>
+<li>Bubble sort is stable</li>
+<li>It is in-place</li>
+</ul>
+<h2 id="naive-approach">Naive Approach</h2>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    arr := []int{10, 3, 25, 17, 21, 55}
+    bubbleSort(arr)
+    fmt.Println(arr)
+}
+
+func bubbleSort(arr []int) {
+    for i := 0; i &lt; len(arr); i++ {
+        for j := 0; j &lt; len(arr)-i-1; j++ {
+            if arr[j] &gt; arr[j+1] {
+                arr[j], arr[j+1] = swap(arr[j], arr[j+1])
+            }
+        }
+    }
+}
+
+func swap(a, b int) (int, int) {
+    return b, a
+}
+
+</code></pre>
+<p><strong>Time Complexity:</strong> &theta;(n*n)</p>
+<h2 id="efficient-approach">Efficient Approach</h2>
+<p>If array is already sorted or get sorted in middle of iteration.</p>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    // arr := []int{10, 3, 25, 17, 21, 55}
+    arr := []int{3, 10, 17, 21, 25, 55}
+    bubbleSort(arr)
+    fmt.Println(arr)
+}
+
+func bubbleSort(arr []int) {
+    for i := 0; i &lt; len(arr); i++ {
+        swapped := false
+        for j := 0; j &lt; len(arr)-i-1; j++ {
+            if arr[j] &gt; arr[j+1] {
+                arr[j], arr[j+1] = swap(arr[j], arr[j+1])
+                swapped = true
+            }
+        }
+        if !swapped {
+            break
+        }
+    }
+}
+
+func swap(a, b int) (int, int) {
+    return b, a
+}
+
+</code></pre>
               
             </div>
           </div>
