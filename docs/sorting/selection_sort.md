@@ -34,3 +34,11 @@ func selectionSort(arr []int) {
 ```
 
 **Time Complexity :** &theta;(n<sup>2</sup>)
+
+Q. Why is it not stable. <br/>
+Ans:<br/>
+Given an array: <br/>
+arr[] = {90, 95, 90, 101 }
+
+90 at 0th index will be swapped with 90 at 3rd index. So orginal order is not maintain when two elements are equal.
+
