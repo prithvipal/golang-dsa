@@ -1,6 +1,6 @@
 # Selection Sort
 
-- &theta;(n * n) Algorithm
+- &theta;(n<sup>2</sup>) Algorithm
 - Does less memory writes compared to quick sort, merge sort, insertion sor etc. But cycle sort is optimal in terms of memory writes
 - Basic idea for heap sort
 - Not stable
@@ -33,4 +33,4 @@ func selectionSort(arr []int) {
 }
 ```
 
-**Time Complexity :** &theta;(n * n)
+**Time Complexity :** &theta;(n<sup>2</sup>)

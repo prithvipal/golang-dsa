@@ -53,7 +53,7 @@ func max(a, b int) int {
 }
 ```
 
-**Time complexity:** &theta;(n * n)
+**Time complexity:** &theta;(n<sup>2</sup>)
 
 ## Efficient Approach
 
