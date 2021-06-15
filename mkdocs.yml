@@ -26,5 +26,6 @@ nav:
         - Introduction: sorting/introduction.md
         - Bubble Sort: sorting/bubble_sort.md
         - Selection Sort: sorting/selection_sort.md
+        - Insertion Sort: sorting/insertion_sort.md
     - About: about.md
 theme: readthedocs
