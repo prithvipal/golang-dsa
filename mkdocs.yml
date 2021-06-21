@@ -28,5 +28,7 @@ nav:
         - Selection Sort: sorting/selection_sort.md
         - Insertion Sort: sorting/insertion_sort.md
         - Merge Sort: sorting/merge_sort.md
+    - Linked List:
+        - Add One in Lisked List Digit: linked_list/add_one_linked_list_digit.md
     - About: about.md
 theme: readthedocs
