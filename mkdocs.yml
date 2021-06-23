@@ -30,5 +30,7 @@ nav:
         - Merge Sort: sorting/merge_sort.md
     - Linked List:
         - Add One in Lisked List Digit: linked_list/add_one_linked_list_digit.md
+    - Concurrency:
+        - Print Odd and Even Sequentially using goroutine: concurrency/print_odd_even_sequentially.md
     - About: about.md
 theme: readthedocs
