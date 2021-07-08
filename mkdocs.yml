@@ -7,6 +7,7 @@ nav:
         - Strign is Anagram: string/anagram.md
         - Word cound in paragraph: string/word_count.md
         - Max n Occurance of Word in Paragraph: string/max_word_n_count.md
+        - All Permutation of A String: string/all_permutation.md
     - Arrays:
         - Introduction: array/intro.md
         - Operation in Array: array/operations.md
