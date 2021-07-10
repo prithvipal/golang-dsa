@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Left Rotate Array by One - Data Structures and Algorithms using Golang</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Left Rotate Array by One";
+    var mkdocs_page_input_path = "array/left_rotate_array_by_one.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Data Structures and Algorithms using Golang</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">String</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../string/palindrom.html">String is Palindrom</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../string/pangram.html">String is Pangram</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../string/anagram.html">Strign is Anagram</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../string/word_count.html">Word cound in paragraph</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../string/max_word_n_count.html">Max n Occurance of Word in Paragraph</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../string/all_permutation.md">All Permutation of A String</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Arrays</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="operations.html">Operation in Array</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="largest_element.html">Largest Element in Array</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="second_largest_element.html">Second Largest Element in Array</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="is_array_sorted.html">Check If Array is Sorted</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="reverse_array.html">Reverse an Array</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="remove_duplicates_from_sorted_array.html">Remove Duplicate from Sorted Array</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="remove_duplicates_from_unsorted_array.html">Remove Duplicate from Unsorted Array</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="move_all_zeroes_to_end.html">Move All Zeroes to End</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="left_rotate_array_by_one.html">Left Rotate Array by One</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="left_rotate_array_by_d.html">Left Rotate Array by d</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="leaders_in_array.html">Leaders in Array</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="maximum_difference.html">Maximum Difference</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="frequency_sorted_array.html">Frequency in Sorted Array</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sorting</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sorting/introduction.html">Introduction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../sorting/bubble_sort.html">Bubble Sort</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../sorting/selection_sort.html">Selection Sort</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../sorting/insertion_sort.html">Insertion Sort</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../sorting/merge_sort.html">Merge Sort</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Linked List</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../linked_list/add_one_linked_list_digit.html">Add One in Lisked List Digit</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Concurrency</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../concurrency/print_odd_even_sequentially.html">Print Odd and Even Sequentially using goroutine</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Data Structures and Algorithms using Golang</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Arrays &raquo;</li>
+        
+      
+    
+    <li>Left Rotate Array by One</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="left-rotate-an-array-by-one">Left Rotate an Array by One</h1>
+<p><strong>Input:</strong> arr[] = {11, 22, 33, 44, 55} </br>
+<strong>Output:</strong> arr[] = {22, 33, 44, 55, 11}</p>
+<p><strong>Input:</strong> arr[] = {50, 3, 22} </br>
+<strong>Output:</strong> arr[] = {3, 22, 50}</p>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func main() {
+    // arr := []int{11, 22, 33, 44, 55} // [22 33 44 55 11]
+    arr := []int{50, 3, 22} // [3 22 50]
+    leftRotateOne(arr)
+    fmt.Println(arr)
+}
+
+func leftRotateOne(arr []int) {
+    temp := arr[0]
+    for i := 1; i &lt; len(arr); i++ {
+        arr[i-1] = arr[i]
+    }
+    arr[len(arr)-1] = temp
+}
+</code></pre>
+<p><strong>Time Complexity:</strong> &theta;(n)
+<strong>Space Complexity:</strong> &theta;(1)</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="left_rotate_array_by_d.html" class="btn btn-neutral float-right" title="Left Rotate Array by d">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="move_all_zeroes_to_end.html" class="btn btn-neutral" title="Move All Zeroes to End"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="move_all_zeroes_to_end.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="left_rotate_array_by_d.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
