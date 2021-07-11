@@ -200,7 +200,53 @@
 <li>In generate for array. Quick sort outperforms it.</li>
 </ul>
 <h2 id="merge-two-sorted-array">Merge Two Sorted Array</h2>
+<p><strong>Input:</strong> a[] = {12, 17, 22} </br>
+b[] = {7, 8, 8, 17} </br>
+<strong>Ouput:</strong> c[] = {7, 8, 8, 12, 17, 22} </br>
+</br></p>
+<p><strong>Input:</strong> a[] = {11, 11, 22} </br>
+b[] = {33} </br>
+<strong>Ouput:</strong> c[] = {11, 11, 22, 33} </br></p>
 <h3 id="naive-solution">Naive Solution</h3>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;sort&quot;
+)
+
+type Person struct {
+    id   int
+    name string
+}
+
+func main() {
+    a := []int{10, 15, 20, 20}
+    b := []int{1, 2, 13}
+    c := merge(a, b)
+    fmt.Println(c)
+}
+
+func merge(a []int, b []int) []int {
+    c := make([]int, len(a)+len(b))
+    for i, ele := range a {
+        c[i] = ele
+    }
+    for i, ele := range b {
+        c[len(a)+i] = ele
+    }
+    sort.Ints(c)
+    return c
+}
+</code></pre>
+<p><strong>Time Complexity:</strong> O((m+n) log(m+n)) </br>
+<strong>Space Complexity:</strong> &theta;(m+n)</p>
+<p><strong>Dry Run:</strong> </br>
+a[] = {10, 15, 20, 20} </br>
+b[] = {1, 2, 13} </br></p>
+<p><em>After 1st Loop:</em> c[] = {10, 15, 20, 20, <em>, </em>, _} </br>
+<em>After 2st Loop:</em> c[] = {10, 15, 20, 20, 1, 2, 13} </br>
+<em>After Sorting:</em> c[] = {1, 2, 10, 13, 15, 20, 20} </br></p>
 <h3 id="efficient-solution">Efficient Solution</h3>
 <h2 id="merge-function-of-merge-sort">Merge Function of Merge Sort</h2>
 <h3 id="implementation-idea">Implementation Idea</h3>
