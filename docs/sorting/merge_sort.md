@@ -64,7 +64,7 @@ func merge(a []int, b []int) []int {
 **Dry Run:** </br>
 a[] = {10, 15, 20, 20} </br>
 b[] = {1, 2, 13} </br>
-
+ 
 *After 1st Loop:* c[] = {10, 15, 20, 20, _, _, _} </br>
 *After 2st Loop:* c[] = {10, 15, 20, 20, 1, 2, 13} </br>
 *After Sorting:* c[] = {1, 2, 10, 13, 15, 20, 20} </br>
