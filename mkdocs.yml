@@ -30,6 +30,7 @@ nav:
         - Insertion Sort: sorting/insertion_sort.md
         - Merge Sort: sorting/merge_sort.md
     - Linked List:
+        - Delete Middle Element of Singly Linked List: linked_list/delete_middle_ele_linked_list.md
         - Reverse A Singly Linked List: linked_list/reserve_singly_linked_list.md
         - Add One in Lisked List Digit: linked_list/add_one_linked_list_digit.md
     - Concurrency:

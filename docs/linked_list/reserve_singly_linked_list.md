@@ -1,6 +1,6 @@
 # Reverse a Singly Linked List
 
-**Input:** 1 -> 2 -> 3 -> 4-> 5->  </br>
+**Input:** 1 -> 2 -> 3 -> 4-> 5  </br>
 **OutPut:** 5 -> 4 -> 3 -> 2 -> 1
 
 ## Implementation
