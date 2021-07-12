@@ -21,7 +21,7 @@ func main() {
 	head.next.next = &Node{data: 3}
 	head.next.next.next = &Node{data: 4}
 	head.next.next.next.next = &Node{data: 5}
-	head = reverse(nil)
+	head = reverse(head)
 	for head != nil {
 		fmt.Printf("%d ", head.data)
 		head = head.next
