@@ -72,6 +72,71 @@ b[] = {1, 2, 13} </br>
 
 ### Efficient Solution
 
+![](docs/merge_sorted_array.png)
+
+Initially i=0, j =0
+
+if a[i] <= b[j] { append a[i]; i++} </br>
+else append b[j]; j++
+
+```golang
+package main
+
+import "fmt"
+
+func main() {
+	a := []int{5, 10, 15, 20}
+	b := []int{10, 20, 30}
+	res := merge(a, b)
+	fmt.Println(res)
+}
+
+func merge(a []int, b []int) (result []int) {
+	i := 0
+	j := 0
+	for i < len(a) && j < len(b) {
+		if a[i] <= b[j] {
+			result = append(result, a[i])
+			i++
+		} else {
+			result = append(result, b[j])
+			j++
+		}
+	}
+
+	for i < len(a) {
+		result = append(result, a[i])
+		i++
+	}
+	for j < len(b) {
+		result = append(result, b[j])
+		j++
+	}
+	return
+}
+```
+
+**Time Complexity:** &theta;(m+n)
+
+**Dry Run:**</br>
+a := {5, 10, 15, 20} </br>
+b := {10, 20, 30}
+
+*First Loop*</br>
+i=0, j=0 </br>
+c[]={5}  i=1 </br>
+c[]={5, 10}  i=2 </br>
+c[]={5, 10, 10}  j=1 </br>
+c[]={5, 10, 10, 15}  i=3 </br>
+c[]={5, 10, 10, 15, 20}  i=4 </br>
+
+*Second Loop* </br>
+Nothing
+
+*Third Loop* </br>
+c[]={5, 10, 10, 15, 20, 20}  j=2 </br>
+c[]={5, 10, 10, 15, 20, 20, 30}  j=3 </br>
+
 ## Merge Function of Merge Sort
 
 ### Implementation Idea
