@@ -6,7 +6,7 @@
 
 **Input:** 1 -> 2 -> 3 -> 4 </br>
 **Output:** 1 -> 2 -> 4 </br>
-***Note:*** If there are odd number of element then there will be two middle elements. So we will delete second middle.
+***Note:*** If there are even number of element then there will be two middle elements. So we will delete second middle.
 
 ## Implementation
 
