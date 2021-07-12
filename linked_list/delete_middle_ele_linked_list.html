@@ -113,6 +113,8 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="delete_middle_ele_linked_list.html">Delete Middle Element of Singly Linked List</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#implementation">Implementation</a>
+    </li>
     </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="reserve_singly_linked_list.html">Reverse A Singly Linked List</a>
@@ -167,6 +169,50 @@
             <div class="section">
               
                 <h1 id="delete-middle-element-of-singly-linked-list">Delete Middle Element of Singly Linked List</h1>
+<p><strong>Input:</strong> 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 </br>
+<strong>Output:</strong> 1 -&gt; 2 -&gt; 4 -&gt; 5 </br>
+<strong><em>Note:</em></strong> If there are odd number of element then delete middle</p>
+<p><strong>Input:</strong> 1 -&gt; 2 -&gt; 3 -&gt; 4 </br>
+<strong>Output:</strong> 1 -&gt; 2 -&gt; 4 </br>
+<strong><em>Note:</em></strong> If there are odd number of element then there will be two middle elements. So we will delete second middle.</p>
+<h2 id="implementation">Implementation</h2>
+<pre><code class="language-golang">package main
+
+import &quot;fmt&quot;
+
+type Node struct {
+    data int
+    next *Node
+}
+
+func main() {
+    head := &amp;Node{data: 1}
+    head.next = &amp;Node{data: 2}
+    head.next.next = &amp;Node{data: 3}
+    head.next.next.next = &amp;Node{data: 4}
+    head.next.next.next.next = &amp;Node{data: 5}
+    deleteMiddle(head)
+    for head != nil {
+        fmt.Printf(&quot;%d &quot;, head.data)
+        head = head.next
+    }
+    fmt.Println()
+
+}
+
+func deleteMiddle(head *Node) {
+    fast := head
+    slow := head
+    pre := head
+
+    for fast != nil &amp;&amp; fast.next != nil {
+        pre = slow
+        slow = slow.next
+        fast = fast.next.next
+    }
+    pre.next = slow.next
+}
+</code></pre>
               
             </div>
           </div>
