@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Introduction - Data Structures and Algorithms using Golang</title>
+  <title>Second Largest Number from Given Number - Data Structures and Algorithms using Golang</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Introduction";
-    var mkdocs_page_input_path = "sorting/introduction.md";
+    var mkdocs_page_name = "Second Largest Number from Given Number";
+    var mkdocs_page_input_path = "bst/second_largest_number_from_given_number.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -97,20 +97,16 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Sorting</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="introduction.html">Introduction</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#stability-of-sorting-algorithm">Stability of Sorting Algorithm</a>
-    </li>
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sorting/introduction.html">Introduction</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="bubble_sort.html">Bubble Sort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../sorting/bubble_sort.html">Bubble Sort</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="selection_sort.html">Selection Sort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../sorting/selection_sort.html">Selection Sort</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="insertion_sort.html">Insertion Sort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../sorting/insertion_sort.html">Insertion Sort</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="merge_sort.html">Merge Sort</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../sorting/merge_sort.html">Merge Sort</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Linked List</span></p>
@@ -128,8 +124,12 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Binary Search Tree</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../bst/second_largest_number_from_given_number.html">Second Largest Number from Given Number</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="second_largest_number_from_given_number.html">Second Largest Number from Given Number</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#implementation">Implementation</a>
+    </li>
+    </ul>
                     </li>
                 </ul>
                 <ul>
@@ -157,11 +157,11 @@
     
       
         
-          <li>Sorting &raquo;</li>
+          <li>Binary Search Tree &raquo;</li>
         
       
     
-    <li>Introduction</li>
+    <li>Second Largest Number from Given Number</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -173,21 +173,66 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="introduction">Introduction</h1>
-<h2 id="stability-of-sorting-algorithm">Stability of Sorting Algorithm</h2>
-<p>A sorting algorithm is stable if it ensures the orignal order if 2 items has same value</p>
-<p><strong>Example of stable sorts</strong></p>
-<ul>
-<li>Bubble Sort</li>
-<li>Insertion Sort</li>
-<li>Merge Sort</li>
-</ul>
-<p><strong>Example of unstable sorts</strong></p>
-<ul>
-<li>Selection Sort</li>
-<li>Quick Sort</li>
-<li>Heap Sorts</li>
-</ul>
+                <h1 id="second-largest-number-from-given-number">Second Largest Number from Given Number</h1>
+<pre><code>          45
+        /    \
+      40       60
+    /   \      /  \ 
+  20     42   50   70
+</code></pre>
+<p>In given above tree, </br>
+if given number n as 70 then result should be 60 </br>
+if given number n as 60 then result should be 45 </br>
+if given number n as 43 then result should be 42 </br>
+if given number n as 15 then result should be NOT FOUND </br></p>
+<h2 id="implementation">Implementation</h2>
+<pre><code class="language-golang">package main
+
+import &quot;fmt&quot;
+
+type Tree struct {
+    data  int
+    left  *Tree
+    right *Tree
+}
+
+func main() {
+    root := &amp;Tree{data: 45}
+    root.left = &amp;Tree{data: 40}
+    root.left.left = &amp;Tree{data: 20}
+    root.left.right = &amp;Tree{data: 42}
+
+    root.right = &amp;Tree{data: 60}
+    root.right.left = &amp;Tree{data: 50}
+    root.right.right = &amp;Tree{data: 70}
+    result := secondLarge(root, 80)
+    if result == nil {
+        fmt.Println(&quot;Not Found&quot;)
+    } else {
+        fmt.Println(*result)
+    }
+
+}
+
+func secondLarge(root *Tree, n int) *int {
+    if root == nil {
+        return nil
+    }
+    var result *int
+    if root.data &lt; n {
+        result = secondLarge(root.right, n)
+    } else if root.data &gt; n {
+        result = secondLarge(root.left, n)
+    }
+    if result == nil || *result &gt;= n {
+        if root.data &gt; n {
+            return nil
+        }
+        return &amp;root.data
+    }
+    return result
+}
+</code></pre>
               
             </div>
           </div>
@@ -195,10 +240,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="bubble_sort.html" class="btn btn-neutral float-right" title="Bubble Sort">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../about.html" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../array/frequency_sorted_array.html" class="btn btn-neutral" title="Frequency in Sorted Array"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../concurrency/print_odd_even_sequentially.html" class="btn btn-neutral" title="Print Odd and Even Sequentially using goroutine"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -224,10 +269,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../array/frequency_sorted_array.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../concurrency/print_odd_even_sequentially.html" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="bubble_sort.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../about.html" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

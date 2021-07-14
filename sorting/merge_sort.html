@@ -147,6 +147,11 @@
                     <li class="toctree-l1"><a class="reference internal" href="../concurrency/print_odd_even_sequentially.html">Print Odd and Even Sequentially using goroutine</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">Binary Search Tree</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../bst/second_largest_number_from_given_number.html">Second Largest Number from Given Number</a>
+                    </li>
+                </ul>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
                     </li>
@@ -252,6 +257,61 @@ b[] = {1, 2, 13} </br></p>
 <em>After 2st Loop:</em> c[] = {10, 15, 20, 20, 1, 2, 13} </br>
 <em>After Sorting:</em> c[] = {1, 2, 10, 13, 15, 20, 20} </br></p>
 <h3 id="efficient-solution">Efficient Solution</h3>
+<p><img alt="" src="docs/merge_sorted_array.png" /></p>
+<p>Initially i=0, j =0</p>
+<p>if a[i] &lt;= b[j] { append a[i]; i++} </br>
+else append b[j]; j++</p>
+<pre><code class="language-golang">package main
+
+import &quot;fmt&quot;
+
+func main() {
+    a := []int{5, 10, 15, 20}
+    b := []int{10, 20, 30}
+    res := merge(a, b)
+    fmt.Println(res)
+}
+
+func merge(a []int, b []int) (result []int) {
+    i := 0
+    j := 0
+    for i &lt; len(a) &amp;&amp; j &lt; len(b) {
+        if a[i] &lt;= b[j] {
+            result = append(result, a[i])
+            i++
+        } else {
+            result = append(result, b[j])
+            j++
+        }
+    }
+
+    for i &lt; len(a) {
+        result = append(result, a[i])
+        i++
+    }
+    for j &lt; len(b) {
+        result = append(result, b[j])
+        j++
+    }
+    return
+}
+</code></pre>
+<p><strong>Time Complexity:</strong> &theta;(m+n)</p>
+<p><strong>Dry Run:</strong></br>
+a := {5, 10, 15, 20} </br>
+b := {10, 20, 30}</p>
+<p><em>First Loop</em></br>
+i=0, j=0 </br>
+c[]={5}  i=1 </br>
+c[]={5, 10}  i=2 </br>
+c[]={5, 10, 10}  j=1 </br>
+c[]={5, 10, 10, 15}  i=3 </br>
+c[]={5, 10, 10, 15, 20}  i=4 </br></p>
+<p><em>Second Loop</em> </br>
+Nothing</p>
+<p><em>Third Loop</em> </br>
+c[]={5, 10, 10, 15, 20, 20}  j=2 </br>
+c[]={5, 10, 10, 15, 20, 20, 30}  j=3 </br></p>
 <h2 id="merge-function-of-merge-sort">Merge Function of Merge Sort</h2>
 <h3 id="implementation-idea">Implementation Idea</h3>
 <h3 id="implementation">Implementation</h3>
