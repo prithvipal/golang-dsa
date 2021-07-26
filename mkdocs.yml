@@ -23,6 +23,7 @@ nav:
         - Leaders in Array: array/leaders_in_array.md
         - Maximum Difference: array/maximum_difference.md
         - Frequency in Sorted Array: array/frequency_sorted_array.md
+        - Sum of All Pair in Sorted Array is Equal to Given Number: array/sum_of_all_pair_in_sorted_array_is_equal_to_given_number.md
     - Sorting:
         - Introduction: sorting/introduction.md
         - Bubble Sort: sorting/bubble_sort.md
