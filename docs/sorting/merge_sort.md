@@ -171,9 +171,52 @@ right[] = { 10, 15, 80}</br>
 a[] = {10, 13, 15, 18, 21, 45, 80}
 
 
-
-
 ### Implementation
+
+```golang
+func merge(a []int, low int, mid int, high int) {
+
+	// Setting up auxilary array
+	n1 := mid - low + 1
+	n2 := high - mid
+	left := make([]int, n1)
+	right := make([]int, n2)
+	for i := 0; i < n1; i++ {
+		left[i] = a[low+i]
+	}
+	for i := 0; i < n2; i++ {
+		right[i] = a[mid+i+1]
+	}
+
+	// standard merge logic
+
+	i := 0
+	j := 0
+	k := 0
+	for i < n1 && j < n2 {
+		if left[i] < right[j] {
+			a[k] = left[i]
+			i++
+			k++
+		} else {
+			a[k] = right[j]
+			k++
+			j++
+		}
+	}
+	for i < n1 {
+		a[k] = left[i]
+		k++
+		i++
+	}
+	for j < n2 {
+		a[k] = right[j]
+		k++
+		j++
+	}
+}
+
+```
 
 ## Merge Sort Algorithm
 
