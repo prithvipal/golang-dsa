@@ -192,7 +192,7 @@ func merge(a []int, low int, mid int, high int) {
 
 	i := 0
 	j := 0
-	k := 0
+	k := low
 	for i < n1 && j < n2 {
 		if left[i] < right[j] {
 			a[k] = left[i]
@@ -218,6 +218,19 @@ func merge(a []int, low int, mid int, high int) {
 
 ```
 
+**Time complexity:** &theta;(n) </br>
+**Aux Space:** &theta;(n) 
 ## Merge Sort Algorithm
+
+```golang
+func mergeSort(arr []int, l, r int) {
+	if r > l { // atleast 2 elements
+		m := (l + r) / 2
+		mergeSort(arr, l, m)
+		mergeSort(arr, m+1, r)
+		merge(arr, l, m, r)
+	}
+}
+```
 
 ## Merge Sort Analysis
