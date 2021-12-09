@@ -156,7 +156,7 @@ high = 4 </br>
 
 **Output:** a[] = {7, 10, 12, 14, 9}
 
-
+![](docs/merge_function_of_merge_sort.png)
 
 ### Implementation Idea
 
