@@ -139,6 +139,25 @@ c[]={5, 10, 10, 15, 20, 20, 30}  j=3 </br>
 
 ## Merge Function of Merge Sort
 
+**Input:** a[] = {12, 15, 22, 13, 32}</br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|---------|  &nbsp; &nbsp; |-----| </br>
+low = 0 </br>
+mid = 2 </br>
+high = 4 </br>
+
+**Output:** a[] = {12, 13, 17 , 22, 32}
+</br>
+
+**Input:** a[] = {7, 10, 12, 14, 9}<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|-------------| &nbsp;|--| </br>
+low = 0 </br>
+mid = 3 </br>
+high = 4 </br>
+
+**Output:** a[] = {7, 10, 12, 14, 9}
+
+
+
 ### Implementation Idea
 
 ### Implementation
