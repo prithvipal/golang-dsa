@@ -160,6 +160,19 @@ high = 4 </br>
 
 ### Implementation Idea
 
+a[] = {13, 18, 21, 45, 10, 15, 80}</br>
+low = 0 </br>
+mid = 3 </br>
+high = 6 </br>
+left[] = {13, 18, 21, 45} </br>
+right[] = { 10, 15, 80}</br>
+
+*merge left and right array* <br>
+a[] = {10, 13, 15, 18, 21, 45, 80}
+
+
+
+
 ### Implementation
 
 ## Merge Sort Algorithm
