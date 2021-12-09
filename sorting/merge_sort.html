@@ -129,6 +129,10 @@
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#merge-sort-algorithm">Merge Sort Algorithm</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#explaination">Explaination</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#merge-sort-analysis">Merge Sort Analysis</a>
     </li>
@@ -315,9 +319,87 @@ Nothing</p>
 c[]={5, 10, 10, 15, 20, 20}  j=2 </br>
 c[]={5, 10, 10, 15, 20, 20, 30}  j=3 </br></p>
 <h2 id="merge-function-of-merge-sort">Merge Function of Merge Sort</h2>
+<p><strong>Input:</strong> a[] = {12, 15, 22, 13, 32}</br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|---------|  &nbsp; &nbsp; |-----| </br>
+low = 0 </br>
+mid = 2 </br>
+high = 4 </br></p>
+<p><strong>Output:</strong> a[] = {12, 13, 17 , 22, 32}
+</br></p>
+<p><strong>Input:</strong> a[] = {7, 10, 12, 14, 9}<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|-------------| &nbsp;|--| </br>
+low = 0 </br>
+mid = 3 </br>
+high = 4 </br></p>
+<p><strong>Output:</strong> a[] = {7, 10, 12, 14, 9}</p>
+<p><img alt="" src="docs/merge_function_of_merge_sort.png" /></p>
 <h3 id="implementation-idea">Implementation Idea</h3>
+<p>a[] = {13, 18, 21, 45, 10, 15, 80}</br>
+low = 0 </br>
+mid = 3 </br>
+high = 6 </br>
+left[] = {13, 18, 21, 45} </br>
+right[] = { 10, 15, 80}</br></p>
+<p><em>merge left and right array</em> <br>
+a[] = {10, 13, 15, 18, 21, 45, 80}</p>
 <h3 id="implementation">Implementation</h3>
+<pre><code class="language-golang">func merge(a []int, low int, mid int, high int) {
+
+    // Setting up auxilary array
+    n1 := mid - low + 1
+    n2 := high - mid
+    left := make([]int, n1)
+    right := make([]int, n2)
+    for i := 0; i &lt; n1; i++ {
+        left[i] = a[low+i]
+    }
+    for i := 0; i &lt; n2; i++ {
+        right[i] = a[mid+i+1]
+    }
+
+    // standard merge logic
+
+    i := 0
+    j := 0
+    k := low
+    for i &lt; n1 &amp;&amp; j &lt; n2 {
+        if left[i] &lt; right[j] {
+            a[k] = left[i]
+            i++
+            k++
+        } else {
+            a[k] = right[j]
+            k++
+            j++
+        }
+    }
+    for i &lt; n1 {
+        a[k] = left[i]
+        k++
+        i++
+    }
+    for j &lt; n2 {
+        a[k] = right[j]
+        k++
+        j++
+    }
+}
+
+</code></pre>
+<p><strong>Time complexity:</strong> &theta;(n) </br>
+<strong>Aux Space:</strong> &theta;(n) </p>
 <h2 id="merge-sort-algorithm">Merge Sort Algorithm</h2>
+<pre><code class="language-golang">func mergeSort(arr []int, l, r int) {
+    if r &gt; l { // atleast 2 elements
+        m := (l + r) / 2
+        mergeSort(arr, l, m)
+        mergeSort(arr, m+1, r)
+        merge(arr, l, m, r)
+    }
+}
+</code></pre>
+<h3 id="explaination">Explaination</h3>
+<p><img alt="" src="docs/merge_sort_algo.png" /></p>
 <h2 id="merge-sort-analysis">Merge Sort Analysis</h2>
               
             </div>
