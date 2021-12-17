@@ -237,3 +237,5 @@ func mergeSort(arr []int, l, r int) {
 ![](docs/merge_sort_algo.png)
 
 ## Merge Sort Analysis
+
+![](docs/merge_sort_analysis.png)
