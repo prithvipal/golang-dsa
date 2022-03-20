@@ -228,6 +228,50 @@ i=2 : <br>
 i=3 : j = 0, 1, 2, 3 </br>
 i=4 : j = 0, 1, 2, 3 </br></p>
 <h2 id="efficient-solution">Efficient Solution</h2>
+<pre><code class="language-golang">package main
+
+import &quot;fmt&quot;
+
+func main() {
+    a := []int{3, 5, 10, 10, 10, 15, 15, 20}
+    b := []int{5, 10, 10, 15, 30}
+    res := intersection(a, b)
+    fmt.Println(res) //[5 10 15]
+}
+
+func intersection(a, b []int) (c []int) {
+    i := 0
+    j := 0
+    for i &lt; len(a) &amp;&amp; j &lt; len(b) {
+        if i &gt; 0 &amp;&amp; a[i-1] == a[i] {
+            i++
+            continue
+        }
+        if a[i] &lt; b[j] {
+            i++
+        } else if a[i] &gt; b[j] {
+            j++
+        } else {
+            c = append(c, a[i])
+            i++
+            j++
+        }
+    }
+    return c
+}
+
+</code></pre>
+<p><strong>Time Complexity:</strong> &theta;(m+n) </br></p>
+<p><strong>Dry Run:</strong> </br>
+a[] = {10, 20, 20, 40, 60} </br>
+b[] = {2, 20, 20, 20} </br></p>
+<p>Initially: i=0, j=0 </br>
+1st Iteration: j=1 </br>
+2nd Iteration: i=1 </br>
+3rd Iteration: c[20], i=2, j=2 </br>
+4th Iteration: i=3 </br>
+5th Iteration: j=3 </br>
+6th Iteration: j=4 </br></p>
               
             </div>
           </div>
