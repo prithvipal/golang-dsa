@@ -54,3 +54,52 @@ i=3 : j = 0, 1, 2, 3 </br>
 i=4 : j = 0, 1, 2, 3 </br>
 
 ## Efficient Solution
+
+```golang
+package main
+
+import "fmt"
+
+func main() {
+	a := []int{3, 5, 10, 10, 10, 15, 15, 20}
+	b := []int{5, 10, 10, 15, 30}
+	res := intersection(a, b)
+	fmt.Println(res) //[5 10 15]
+}
+
+func intersection(a, b []int) (c []int) {
+	i := 0
+	j := 0
+	for i < len(a) && j < len(b) {
+		if i > 0 && a[i-1] == a[i] {
+			i++
+			continue
+		}
+		if a[i] < b[j] {
+			i++
+		} else if a[i] > b[j] {
+			j++
+		} else {
+			c = append(c, a[i])
+			i++
+			j++
+		}
+	}
+	return c
+}
+
+```
+
+**Time Complexity:** &theta;(m+n) </br>
+
+**Dry Run:** </br>
+a[] = {10, 20, 20, 40, 60} </br>
+b[] = {2, 20, 20, 20} </br>
+
+Initially: i=0, j=0 </br>
+1st Iteration: j=1 </br>
+2nd Iteration: i=1 </br>
+3rd Iteration: c[20], i=2, j=2 </br>
+4th Iteration: i=3 </br>
+5th Iteration: j=3 </br>
+6th Iteration: j=4 </br>
