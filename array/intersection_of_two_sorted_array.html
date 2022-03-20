@@ -189,6 +189,44 @@ b[] = { 6, 12, 13, 17, 40} </br>
 b[] = {2, 2, 2, 2, 4, 6, 7} </br>
 <strong>Output:</strong> c[] = {2, 4}</p>
 <h2 id="naive-solution">Naive Solution</h2>
+<pre><code class="language-golang">package main
+
+import &quot;fmt&quot;
+
+func main() {
+    a := []int{3, 5, 10, 10, 10, 15, 15, 20}
+    b := []int{5, 10, 10, 15, 30}
+    res := intersection(a, b)
+    fmt.Println(res) //[5 10 15]
+}
+
+func intersection(a, b []int) (c []int) {
+    for i := 0; i &lt; len(a); i++ {
+        if i &gt; 0 &amp;&amp; a[i] == a[i-1] {
+            continue
+        }
+        for j := 0; j &lt; len(b); j++ {
+            if a[i] == b[j] {
+                c = append(c, a[i])
+                break
+            }
+        }
+    }
+
+    return c
+}
+
+</code></pre>
+<p><strong>Time Complexity:</strong> O(m*n) </br></p>
+<p><strong>Dry Run:</strong></br>
+a[] = {1, 20, 20, 40, 60} </br>
+b[] = {2, 20, 20, 20} </br></p>
+<p>i=0 : j=0, 1, 2, 3 </br>
+i=1 : j=0, 1 </br>
+&nbsp;&nbsp;&nbsp;&nbsp; c[] = {20} </br>
+i=2 : <br>
+i=3 : j = 0, 1, 2, 3 </br>
+i=4 : j = 0, 1, 2, 3 </br></p>
 <h2 id="efficient-solution">Efficient Solution</h2>
               
             </div>
