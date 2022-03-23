@@ -55,3 +55,20 @@ After 1st loop: c[] = {3, 5, 5, _, _, _, _} </br>
 After 2nd loop: c[] = {3, 5, 5, 1, 5, 7, 7} </br>
 After sorting: c[] = {1, 3, 5, 5, 5, 7, 7} </br>
 3rd loop: res[] = {1, 3, 5, 7} </br>
+
+## Efficient Solution
+
+### Implementation Idea
+
+![](resources/union_sorted_array.png)
+
+if i > 0 && a[i] == a[i-1] { i++; continue; } </br>
+if j > 0 && b[j] == b[j-1] { j++; continue; } </br>
+if a[i] < b[j] { c=append(c,a[i]); i++ } </br>
+if a[i] > b[j] { c=append(c,b[j]); j++ } </br>
+if a[i] == b[j] { c=append(c,a[i]); i++; j++ } </br>
+
+### Implementation
+
+```golang
+```

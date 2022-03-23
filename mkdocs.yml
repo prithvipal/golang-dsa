@@ -42,4 +42,4 @@ nav:
     - Binary Search Tree:
         - Second Largest Number from Given Number: bst/second_largest_number_from_given_number.md
     - About: about.md
-theme: readthedocs
+theme: material
