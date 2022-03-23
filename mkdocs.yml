@@ -41,5 +41,5 @@ nav:
         - Print Odd and Even Sequentially using goroutine: concurrency/print_odd_even_sequentially.md
     - Binary Search Tree:
         - Second Largest Number from Given Number: bst/second_largest_number_from_given_number.md
-    - About: about.md
+    - About Author: about.md
 theme: material
