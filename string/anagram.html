@@ -878,6 +878,50 @@
 </ul>
 <p><strong>Note:</strong> The string may contain punctuations. You need to ignore punctuations</p>
 <h2 id="implementation">Implementation</h2>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;strings&quot;
+)
+
+func main() {
+    str1 := &quot;William Shakespeare.&quot;
+    str2 := &quot; I am a weakish speller&quot;
+    res := anagram(str1, str2)
+    fmt.Println(res)
+}
+
+func anagram(str1, str2 string) bool {
+    r1 := []rune(strings.ToLower(str1))
+    r2 := []rune(strings.ToLower(str2))
+    m1 := make(map[rune]int)
+    for _, ele := range r1 {
+        if (ele &gt;= 97 &amp;&amp; ele &lt;= 122) || (ele &gt;= 65 &amp;&amp; ele &lt;= 90) {
+            m1[ele] = m1[ele] + 1
+        }
+    }
+
+    m2 := make(map[rune]int)
+    for _, ele := range r2 {
+        if (ele &gt;= 97 &amp;&amp; ele &lt;= 122) || (ele &gt;= 65 &amp;&amp; ele &lt;= 90) {
+            m2[ele] = m2[ele] + 1
+        }
+    }
+
+    if len(m1) != len(m2) {
+        return false
+    }
+    for key, val := range m1 {
+        if val != m2[key] {
+            return false
+        }
+    }
+
+    return true
+}
+
+</code></pre>
                 
               
               
