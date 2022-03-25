@@ -63,7 +63,13 @@ func inversionCount(arr []int) int {
     - We count inversion in right half
     - While merging, we count inversion where one element is from left half and one element from right half
 
+![](resources/count_inversion.jpg)
 
+
+Every inversion (x,y) where x>y has three possibity<br>
+1. Both x & y are in left half </br>
+2. Both x & y are in right half </br>
+3. x is in left half and y is in right half
 
 ```
 package main
