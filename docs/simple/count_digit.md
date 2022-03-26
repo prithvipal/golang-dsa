@@ -1,5 +1,16 @@
 # Count Digit
 
+**Input:** a := 1234</br>
+**Output:** 4
+
+**Input:** a := 98</br>
+**Output:** 2
+
+**Input:** a := 5</br>
+**Output:** 1
+
+where a > 0
+
 ## Using Loop
 
 ```
@@ -21,6 +32,15 @@ func digitCount(n int) int {
 	return result
 }
 ```
+
+**Dry Run**</br>
+d = 123</br>
+Initially result = 0</br>
+After 1st Iteration: x = 12 and res=1</br>
+After 2nd Iteration: x = 1 and res=2</br>
+After 3rd Iteration: x = 0 and res=3</br>
+
+**Time Complexity:** &theta;(d) where d is number of digits
 
 ## Using Logarithm
 
