@@ -14,7 +14,7 @@
     
     
       
-        <title>Computing Power(x,n) - Data Structures and Algorithms using Golang</title>
+        <title>Factorial of A Number - Data Structures and Algorithms using Golang</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#computing-powerxn" class="md-skip">
+        <a href="#factorial-of-a-number" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Computing Power(x,n)
+              Factorial of A Number
             
           </span>
         </div>
@@ -194,13 +194,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
-        Mathematics
+        Simple
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Mathematics" data-md-level="1">
+      <nav class="md-nav" aria-label="Simple" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Mathematics
+          Simple
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -231,11 +231,21 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="factorial_of_number.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="factorial_of_number.html" class="md-nav__link md-nav__link--active">
         Factorial of A Number
       </a>
+      
     </li>
   
 
@@ -327,21 +337,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="computing_power_x_n.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="computing_power_x_n.html" class="md-nav__link">
         Computing Power(x,n)
       </a>
-      
     </li>
   
 
@@ -1009,7 +1009,24 @@
               
                 
                 
-                <h1 id="computing-powerxn">Computing Power(x,n)</h1>
+                <h1 id="factorial-of-a-number">Factorial of A Number</h1>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    f := fact(4)
+    fmt.Println(f)
+}
+
+func fact(n int) int {
+    if n == 1 {
+        return 1
+    }
+    return n * fact(n-1)
+}
+
+</code></pre>
                 
               
               
@@ -1029,7 +1046,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="sieve_of_eratosthenes.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sieve of Eratosthenes" rel="prev">
+        <a href="palindrome_numbers.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Palindrome Numbers" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1038,20 +1055,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Sieve of Eratosthenes
+              Palindrome Numbers
             </div>
           </div>
         </a>
       
       
         
-        <a href="iterative_power_binary_exponentiation.html" class="md-footer__link md-footer__link--next" aria-label="Next: Iterative Power (Binary Exponentiation)" rel="next">
+        <a href="trailing_zeros_in_factorial.html" class="md-footer__link md-footer__link--next" aria-label="Next: Trailing Zeros in Factorial" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Iterative Power (Binary Exponentiation)
+              Trailing Zeros in Factorial
             </div>
           </div>
           <div class="md-footer__button md-icon">
