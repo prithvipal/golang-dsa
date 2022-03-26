@@ -1,19 +1,19 @@
 site_name: Data Structures and Algorithms using Golang
 nav:
     - Home: index.md
-    - Mathematics:
-        - Count Digits: mathematics/count_digit.md
-        - Palindrome Numbers: mathematics/palindrome_numbers.md
-        - Factorial of A Number: mathematics/factorial_of_number.md
-        - Trailing Zeros in Factorial: mathematics/trailing_zeros_in_factorial.md
-        - Greatest Common Divisor: mathematics/greatest_common_divisor.md
-        - LCM of Two Numbers:  mathematics/lcm_of_two_numbers.md
-        - Check for Prime:  mathematics/check_for_prime.md
-        - Prime Factors:  mathematics/prime_factors.md
-        - All Divisors Of A Number:  mathematics/all_divisors_of_a_number.md
-        - Sieve of Eratosthenes:  mathematics/sieve_of_eratosthenes.md
-        - Computing Power(x,n):  mathematics/computing_power_x_n.md
-        - Iterative Power (Binary Exponentiation):  mathematics/iterative_power_binary_exponentiation.md
+    - Simple:
+        - Count Digits: simple/count_digit.md
+        - Palindrome Numbers: simple/palindrome_numbers.md
+        - Factorial of A Number: simple/factorial_of_number.md
+        - Trailing Zeros in Factorial: simple/trailing_zeros_in_factorial.md
+        - Greatest Common Divisor: simple/greatest_common_divisor.md
+        - LCM of Two Numbers:  simple/lcm_of_two_numbers.md
+        - Check for Prime:  simple/check_for_prime.md
+        - Prime Factors:  simple/prime_factors.md
+        - All Divisors Of A Number:  simple/all_divisors_of_a_number.md
+        - Sieve of Eratosthenes:  simple/sieve_of_eratosthenes.md
+        - Computing Power(x,n):  simple/computing_power_x_n.md
+        - Iterative Power (Binary Exponentiation):  simple/iterative_power_binary_exponentiation.md
     - String:
         - String is Palindrom: string/palindrom.md
         - String is Pangram: string/pangram.md
