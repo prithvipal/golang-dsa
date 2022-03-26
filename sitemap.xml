@@ -1,247 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/about/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/count_inversion_in_array/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/frequency_sorted_array/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/intersection_of_two_sorted_array/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/intro/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/is_array_sorted/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/largest_element/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/leaders_in_array/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/left_rotate_array_by_d/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/left_rotate_array_by_one/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/maximum_difference/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/move_all_zeroes_to_end/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/operations/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/remove_duplicates_from_sorted_array/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/remove_duplicates_from_unsorted_array/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/reverse_array/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/second_largest_element/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/sum_of_all_pair_in_sorted_array_is_equal_to_given_number/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/array/union_of_two_sorted_array/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/bst/second_largest_number_from_given_number/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/concurrency/print_odd_even_sequentially/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/linked_list/add_one_linked_list_digit/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/linked_list/delete_middle_ele_linked_list/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/linked_list/reserve_singly_linked_list/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/all_divisors_of_a_number/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/check_for_prime/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/computing_power_x_n/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/count_digit/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/factorial_of_number/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/greatest_common_divisor/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/iterative_power_binary_exponentiation/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/lcm_of_two_numbers/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/palindrome_numbers/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/prime_factors/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/sieve_of_eratosthenes/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/simple/trailing_zeros_in_factorial/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/sorting/bubble_sort/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/sorting/insertion_sort/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/sorting/introduction/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/sorting/merge_sort/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/sorting/selection_sort/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/string/all_permutation/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/string/anagram/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/string/max_word_n_count/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/string/palindrom/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/string/pangram/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/string/subsequence/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://example.com/string/word_count/</loc>
          <lastmod>2022-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
