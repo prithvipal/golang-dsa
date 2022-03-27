@@ -242,9 +242,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Factorial of A Number
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="factorial_of_number.html" class="md-nav__link md-nav__link--active">
         Factorial of A Number
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iterative-approach" class="md-nav__link">
+    Iterative Approach
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-approach" class="md-nav__link">
+    Recursive Approach
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -998,6 +1035,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iterative-approach" class="md-nav__link">
+    Iterative Approach
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-approach" class="md-nav__link">
+    Recursive Approach
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1010,6 +1069,33 @@
                 
                 
                 <h1 id="factorial-of-a-number">Factorial of A Number</h1>
+<p><strong>Input:</strong> n = 4 </br>
+<strong>Output:</strong> 24</p>
+<p><strong>Input:</strong> n = 6 </br>
+<strong>Output:</strong> 760</p>
+<p><strong>Input:</strong> n = 0 </br>
+<strong>Output:</strong> 1</p>
+<h2 id="iterative-approach">Iterative Approach</h2>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    res := fact(6)
+    fmt.Println(res)
+}
+
+func fact(n int) int {
+    res := 1
+    for i := 2; i &lt; n; i++ {
+        res = res * i
+    }
+    return res
+}
+</code></pre>
+<p><strong>Time Complexity:</strong> &theta;(n) </br>
+<strong>Aux Space Complexity:</strong> &theta;(1)</p>
+<h2 id="recursive-approach">Recursive Approach</h2>
 <pre><code>package main
 
 import &quot;fmt&quot;
@@ -1020,13 +1106,15 @@ func main() {
 }
 
 func fact(n int) int {
-    if n == 1 {
+    if n == 0 {
         return 1
     }
     return n * fact(n-1)
 }
 
 </code></pre>
+<p><strong>Time Complexity:</strong> &theta;(n) </br>
+<strong>Aux Space Complexity:</strong> &theta;(n)</p>
                 
               
               
