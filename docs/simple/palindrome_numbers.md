@@ -19,3 +19,32 @@
 **Input:** n = 123
 **Output:** No
 
+## Implementation
+
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// res := isPalindrome(12321) // true
+	// res := isPalindrome(1221) // true
+	res := isPalindrome(123) // false
+	fmt.Println(res)
+}
+
+func isPalindrome(n int) bool {
+	rev := 0
+	temp := n
+	for temp != 0 {
+		lastDigit := temp % 10
+		rev = rev*10 + lastDigit
+		temp = temp / 10
+	}
+	return rev == n
+
+}
+
+```
