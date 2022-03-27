@@ -230,9 +230,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Palindrome Numbers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="palindrome_numbers.html" class="md-nav__link md-nav__link--active">
         Palindrome Numbers
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -998,6 +1028,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1025,6 +1070,33 @@
 <strong>Output:</strong> No</p>
 <p><strong>Input:</strong> n = 123
 <strong>Output:</strong> No</p>
+<h2 id="implementation">Implementation</h2>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func main() {
+    // res := isPalindrome(12321) // true
+    // res := isPalindrome(1221) // true
+    res := isPalindrome(123) // false
+    fmt.Println(res)
+}
+
+func isPalindrome(n int) bool {
+    rev := 0
+    temp := n
+    for temp != 0 {
+        lastDigit := temp % 10
+        rev = rev*10 + lastDigit
+        temp = temp / 10
+    }
+    return rev == n
+
+}
+
+</code></pre>
                 
               
               
