@@ -44,3 +44,19 @@ func trailingZeroInFact(n int) int {
 }
 
 ```
+
+**Time Complexity:** &theta;(n)
+
+**Dry Run:**
+
+n = 10</br>
+fact =  3628800</br>
+res = 0</br>
+After 1st iteration: res = 1, fact=362880</br>
+After 2nd iteration: res = 2, fact=36288</br>
+
+**Limitation:**
+
+- Causes value overflow for even for slightly higher value. Ex: n = 21, the factoring will be 20 digits. So it will be larger than int value in golang.
+
+## Efficient Approach
