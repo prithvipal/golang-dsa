@@ -254,9 +254,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Trailing Zeros in Factorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="trailing_zeros_in_factorial.html" class="md-nav__link md-nav__link--active">
         Trailing Zeros in Factorial
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naive-approach" class="md-nav__link">
+    Naive Approach
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -998,6 +1028,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naive-approach" class="md-nav__link">
+    Naive Approach
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1010,6 +1055,42 @@
                 
                 
                 <h1 id="trailing-zeros-in-factorial">Trailing Zeros in Factorial</h1>
+<p><strong>Input:</strong> n = 5 </br>
+<strong>Output:</strong> 1 </br>
+<strong>Explaination:</strong> 1 * 2 * 3 * 4 * 5 = 120. We have one trailing zero in 120 </br></p>
+<p><strong>Input:</strong> n = 10 </br>
+<strong>Output:</strong> 2 </br>
+<strong>Explaination:</strong> 1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 * 9 * 10 = 3628800. We have two trailing zero in 3628800 </br></p>
+<p><strong>Input:</strong> n = 10 </br>
+<strong>Output:</strong> 2 </br>
+<strong>Explaination:</strong> 1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 * 9 * 10 = 3628800. We have two trailing zero in 3628800 </br></p>
+<p><strong>Input:</strong> n = 100 </br>
+<strong>Output:</strong> 24 </br>
+<strong>Explaination:</strong> 1 * 2 * 3 * 4 * 5 ..... 98 * 99 * 100 = <code>93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000</code>. We have 24 trailing zero in this number </br></p>
+<h2 id="naive-approach">Naive Approach</h2>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    res := trailingZeroInFact(10)
+    fmt.Println(res)
+}
+
+func trailingZeroInFact(n int) int {
+    fact := 1
+    for i := 2; i &lt;= n; i++ {
+        fact = fact * i
+    }
+    res := 0
+    for fact%10 == 0 {
+        res++
+        fact = fact / 10
+    }
+    return res
+}
+
+</code></pre>
                 
               
               
