@@ -812,9 +812,59 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Quick Sort
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="quick_sort.html" class="md-nav__link md-nav__link--active">
         Quick Sort
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#partition-a-given-array" class="md-nav__link">
+    Partition a Given Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naive-partition" class="md-nav__link">
+    Naive Partition
+  </a>
+  
+    <nav class="md-nav" aria-label="Naive Partition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1010,6 +1060,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#partition-a-given-array" class="md-nav__link">
+    Partition a Given Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naive-partition" class="md-nav__link">
+    Naive Partition
+  </a>
+  
+    <nav class="md-nav" aria-label="Naive Partition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1022,6 +1107,29 @@
                 
                 
                 <h1 id="quick-sort">Quick Sort</h1>
+<h2 id="partition-a-given-array">Partition a Given Array</h2>
+<p><strong>Input:</strong> arr[] = {13, 16, 22, 20, 17} </br>
+pivot = 5 </br>
+<strong>Output:</strong> arr[] = {13, 16, 17, 22, 20}  </br>
+or </br>
+arr[] = {16, 13, 17, 22, 20}
+return value: 2 </br>
+It is a new index of pivot element</p>
+<pre><code>Stability in Partition
+├── Stable
+│   └── Naive Partition
+└── Not Stable
+    ├── Lomuto Partition
+    └── Hoare's Partition
+</code></pre>
+<h2 id="naive-partition">Naive Partition</h2>
+<p><img alt="" src="docs/naive_partition.png" /></p>
+<p><strong>Input:</strong> arr[] = {12, 17, 18, 13, 17} </br>
+pivot = 1 or 4 </br>
+<strong>Output:</strong> arr[] = {12, 13, 17, 17, 18}
+return value = 3</br></p>
+<p><strong>Note:</strong> Please note in the return value on above example that we return the last index of 17 i.e. 3, even our pivot is 1 or 4. So we  need to return the last occurrence of pivot element as explained in above example.</p>
+<h3 id="implementation">Implementation</h3>
                 
               
               
