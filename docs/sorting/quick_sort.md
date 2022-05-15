@@ -93,3 +93,47 @@ After 1st loop temp[] = {3, _, _, _, _} </br>
 After 2nd loop temp[] = {3, 5, 5, _, _} </br>
 After 3nd loop temp[] = {3, 5, 5, 12, 8} </br>
 After 4th loop arr[] = {3, 5, 5, 12, 8} </br>
+
+## Lomuto Partition
+
+arr[] = {10, 80, 30, 90, 40, 50, 70} </br>
+l=0, h=6, pivot=70
+
+Lomuto partition always selects the last element s pivot element.
+
+![](docs/lomuto_partition.png)
+
+As above diagram explains, the Lomuto partition moves *< pivot* elements into 0 --> i section and keeps *>=pivot* elements intp i --> j section.
+
+### Implementation
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	arr := []int{30, 80, 10, 90, 40, 50, 70}
+	p := lomutoPartition(arr, 0, len(arr)-1)
+	fmt.Println(p)
+	fmt.Println(arr)
+}
+
+func lomutoPartition(arr []int, l, h int) int {
+	p := arr[h]
+	i := l - 1
+	for j := l; j < h; j++ {
+		if arr[j] < p {
+			i++
+			arr[i], arr[j] = arr[j], arr[i]
+		}
+	}
+	arr[i+1], arr[h] = arr[h], arr[i+1]
+	return i + 1
+}
+```
+#### Complexity
+*Time Complexity:* O(n) </br>
+*Aux Space Complexity:* O(1) </br>
+
+#### Dry run
