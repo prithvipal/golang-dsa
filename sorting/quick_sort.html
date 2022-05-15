@@ -882,6 +882,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lomuto-partition" class="md-nav__link">
+    Lomuto Partition
+  </a>
+  
+    <nav class="md-nav" aria-label="Lomuto Partition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation_1" class="md-nav__link">
+    Implementation
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complexity_1" class="md-nav__link">
+    Complexity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dry-run_1" class="md-nav__link">
+    Dry run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1133,6 +1173,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lomuto-partition" class="md-nav__link">
+    Lomuto Partition
+  </a>
+  
+    <nav class="md-nav" aria-label="Lomuto Partition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation_1" class="md-nav__link">
+    Implementation
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complexity_1" class="md-nav__link">
+    Complexity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dry-run_1" class="md-nav__link">
+    Dry run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1226,6 +1306,41 @@ l=0, h=4, p=0</p>
 After 2nd loop temp[] = {3, 5, 5, <em>, </em>} </br>
 After 3nd loop temp[] = {3, 5, 5, 12, 8} </br>
 After 4th loop arr[] = {3, 5, 5, 12, 8} </br></p>
+<h2 id="lomuto-partition">Lomuto Partition</h2>
+<p>arr[] = {10, 80, 30, 90, 40, 50, 70} </br>
+l=0, h=6, pivot=70</p>
+<p>Lomuto partition always selects the last element s pivot element.</p>
+<p><img alt="" src="docs/lomuto_partition.png" /></p>
+<p>As above diagram explains, the Lomuto partition moves <em>&lt; pivot</em> elements into 0 --&gt; i section and keeps <em>&gt;=pivot</em> elements intp i --&gt; j section.</p>
+<h3 id="implementation_1">Implementation</h3>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    arr := []int{30, 80, 10, 90, 40, 50, 70}
+    p := lomutoPartition(arr, 0, len(arr)-1)
+    fmt.Println(p)
+    fmt.Println(arr)
+}
+
+func lomutoPartition(arr []int, l, h int) int {
+    p := arr[h]
+    i := l - 1
+    for j := l; j &lt; h; j++ {
+        if arr[j] &lt; p {
+            i++
+            arr[i], arr[j] = arr[j], arr[i]
+        }
+    }
+    arr[i+1], arr[h] = arr[h], arr[i+1]
+    return i + 1
+}
+</code></pre>
+<h4 id="complexity_1">Complexity</h4>
+<p><em>Time Complexity:</em> O(n) </br>
+<em>Aux Space Complexity:</em> O(1) </br></p>
+<h4 id="dry-run_1">Dry run</h4>
                 
               
               
