@@ -31,3 +31,65 @@ return value = 3</br>
 
 ### Implementation
 
+```
+package main
+
+import "fmt"
+
+func main() {
+	arr := []int{30, 80, 40, 90, 10, 50, 70}
+	p := partition(arr, 0, len(arr)-1, len(arr)-1)
+	fmt.Println(p) // 4
+	fmt.Println(arr) // [30 40 10 50 70 80 90]
+}
+
+func partition(arr []int, l, h, p int) int {
+	temp := make([]int, h-l+1) // create temp array
+	idx := 0
+
+	for i := l; i <= h; i++ {
+		if arr[i] < arr[p] {
+			temp[idx] = arr[i] //Smaller in temp array
+			idx++
+		}
+	}
+
+	for i := l; i <= h; i++ {
+		if arr[i] == arr[p] {
+			temp[idx] = arr[i] // equal elements in temp. We could do thi sin first loop but we need this loop for stability
+			idx++
+		}
+	}
+
+	res := l + idx - 1 // last ocurrance of pivot
+
+	for i := l; i <= h; i++ {
+		if arr[i] > arr[p] {
+			temp[idx] = arr[i] // greator elements in temp
+			idx++
+		}
+	}
+
+	for i := l; i <= h; i++ {
+		arr[i] = temp[i] // copy to original array
+	}
+
+	return res
+}
+
+```
+
+#### Complexity
+
+*Time Complexity:* &theta;(n) </br>
+*Aux Space Complexity:* &theta;(n)
+
+#### Dry Run
+
+arr[] = {5, 3, 12, 8, 5}</br>
+l=0, h=4, p=0
+
+After 1st loop temp[] = {3, _, _, _, _} </br>
+After 2nd loop temp[] = {3, 5, 5, _, _} </br>
+After 3nd loop temp[] = {3, 5, 5, 12, 8} </br>
+After 4th loop arr[] = {3, 5, 5, 12, 8} </br>
