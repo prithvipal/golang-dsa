@@ -137,3 +137,13 @@ func lomutoPartition(arr []int, l, h int) int {
 *Aux Space Complexity:* O(1) </br>
 
 #### Dry run
+
+![](docs/lomuto_partition_dry_run.png)
+
+
+#### Cornor cases
+
+Dry run yourself:
+
+1. {70, 60, 80, 40, 30}  ==> No small value than pivot
+2. {30, 40, 20, 50, 80}  ==> No large value than pivot
