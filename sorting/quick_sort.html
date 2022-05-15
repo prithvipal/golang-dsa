@@ -855,6 +855,26 @@
     Implementation
   </a>
   
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complexity" class="md-nav__link">
+    Complexity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dry-run" class="md-nav__link">
+    Dry Run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1086,6 +1106,26 @@
     Implementation
   </a>
   
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complexity" class="md-nav__link">
+    Complexity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dry-run" class="md-nav__link">
+    Dry Run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1130,6 +1170,62 @@ pivot = 1 or 4 </br>
 return value = 3</br></p>
 <p><strong>Note:</strong> Please note in the return value on above example that we return the last index of 17 i.e. 3, even our pivot is 1 or 4. So we  need to return the last occurrence of pivot element as explained in above example.</p>
 <h3 id="implementation">Implementation</h3>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    arr := []int{30, 80, 40, 90, 10, 50, 70}
+    p := partition(arr, 0, len(arr)-1, len(arr)-1)
+    fmt.Println(p) // 4
+    fmt.Println(arr) // [30 40 10 50 70 80 90]
+}
+
+func partition(arr []int, l, h, p int) int {
+    temp := make([]int, h-l+1) // create temp array
+    idx := 0
+
+    for i := l; i &lt;= h; i++ {
+        if arr[i] &lt; arr[p] {
+            temp[idx] = arr[i] //Smaller in temp array
+            idx++
+        }
+    }
+
+    for i := l; i &lt;= h; i++ {
+        if arr[i] == arr[p] {
+            temp[idx] = arr[i] // equal elements in temp. We could do thi sin first loop but we need this loop for stability
+            idx++
+        }
+    }
+
+    res := l + idx - 1 // last ocurrance of pivot
+
+    for i := l; i &lt;= h; i++ {
+        if arr[i] &gt; arr[p] {
+            temp[idx] = arr[i] // greator elements in temp
+            idx++
+        }
+    }
+
+    for i := l; i &lt;= h; i++ {
+        arr[i] = temp[i] // copy to original array
+    }
+
+    return res
+}
+
+</code></pre>
+<h4 id="complexity">Complexity</h4>
+<p><em>Time Complexity:</em> &theta;(n) </br>
+<em>Aux Space Complexity:</em> &theta;(n)</p>
+<h4 id="dry-run">Dry Run</h4>
+<p>arr[] = {5, 3, 12, 8, 5}</br>
+l=0, h=4, p=0</p>
+<p>After 1st loop temp[] = {3, <em>, </em>, <em>, </em>} </br>
+After 2nd loop temp[] = {3, 5, 5, <em>, </em>} </br>
+After 3nd loop temp[] = {3, 5, 5, 12, 8} </br>
+After 4th loop arr[] = {3, 5, 5, 12, 8} </br></p>
                 
               
               
