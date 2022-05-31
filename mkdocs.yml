@@ -41,6 +41,8 @@ nav:
         - Intersection of Two Sorted Array: array/intersection_of_two_sorted_array.md
         - Union of Two Sorted Array: array/union_of_two_sorted_array.md
         - Count Inversion in An Array: array/count_inversion_in_array.md
+    - Searching:
+        - Binary Search: searching/binary_search.md
     - Sorting:
         - Introduction: sorting/introduction.md
         - Bubble Sort: sorting/bubble_sort.md
