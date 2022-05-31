@@ -43,6 +43,8 @@ nav:
         - Count Inversion in An Array: array/count_inversion_in_array.md
     - Searching:
         - Binary Search: searching/binary_search.md
+        - First Occurance in Sorted Array: searching/first_occu.md
+        - Last Occurance in Sorted Array: searching/last_occu.md
     - Sorting:
         - Introduction: sorting/introduction.md
         - Bubble Sort: sorting/bubble_sort.md
