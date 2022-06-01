@@ -45,6 +45,7 @@ nav:
         - Binary Search: searching/binary_search.md
         - First Occurance in Sorted Array: searching/first_occu.md
         - Last Occurance in Sorted Array: searching/last_occu.md
+        - Count Occurance in Sorted Array: searching/count_occu.md
     - Sorting:
         - Introduction: sorting/introduction.md
         - Bubble Sort: sorting/bubble_sort.md
