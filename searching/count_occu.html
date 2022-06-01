@@ -14,7 +14,7 @@
     
     
       
-        <title>Binary Search - Data Structures and Algorithms using Golang</title>
+        <title>Count Occurance in Sorted Array - Data Structures and Algorithms using Golang</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#binary-search" class="md-skip">
+        <a href="#cound-occurance-in-sorted-array" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Binary Search
+              Count Occurance in Sorted Array
             
           </span>
         </div>
@@ -741,58 +741,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Binary Search
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="binary_search.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="binary_search.html" class="md-nav__link">
         Binary Search
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#iterative" class="md-nav__link">
-    Iterative
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recursive" class="md-nav__link">
-    Recursive
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -824,11 +777,21 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="count_occu.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="count_occu.html" class="md-nav__link md-nav__link--active">
         Count Occurance in Sorted Array
       </a>
+      
     </li>
   
 
@@ -1125,28 +1088,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#iterative" class="md-nav__link">
-    Iterative
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recursive" class="md-nav__link">
-    Recursive
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1158,61 +1099,65 @@
               
                 
                 
-                <h1 id="binary-search">Binary Search</h1>
-<h2 id="iterative">Iterative</h2>
+                <h1 id="cound-occurance-in-sorted-array">Cound Occurance in Sorted Array</h1>
 <pre><code>package main
 
-import &quot;fmt&quot;
+import (
+    &quot;fmt&quot;
+    &quot;math&quot;
+    &quot;sort&quot;
+)
 
 func main() {
-
-   // idx := search([]int{1, 2, 3, 4, 5}, 6) //-1
-    idx := search([]int{1, 2, 3, 4, 5}, 3) // 2
-    fmt.Println(idx)
+    res := countOcc([]int{10, 20, 20, 20, 40, 40, 50}, 20) // 3
+    fmt.Println(res)
 }
 
-func search(nums []int, target int) int {
+func countOcc(arr []int, target int) int {
     low := 0
-    high := len(nums) - 1
-
-    for low &lt;= high {
-        mid := (low + high) / 2
-        if nums[mid] == target {
-            return mid
-        } else if nums[mid] &lt; target {
-            low = mid + 1
-        } else {
-            high = mid - 1
-        }
+    high := len(arr) - 1
+    firstO := firstOcc(arr, low, high, target)
+    if firstO == -1 {
+        return 0
     }
-    return -1
-}
-</code></pre>
-<h2 id="recursive">Recursive</h2>
-<pre><code>package main
-
-import &quot;fmt&quot;
-
-func main() {
-    // idx := searchRec([]int{1, 2, 3, 4, 5}, 0, 4, 6) // -1
-    idx := searchRec([]int{1, 2, 3, 4, 5}, 0, 4, 3) // 2
-    fmt.Println(idx)
+    lastO := lastOcc(arr, low, high, target)
+    return (lastO - firstO) + 1
 }
 
-func searchRec(nums []int, low, high, target int) int {
+func firstOcc(arr []int, low, high, target int) int {
     if low &gt; high {
         return -1
     }
     mid := (low + high) / 2
-
-    if nums[mid] == target {
-        return mid
-    } else if nums[mid] &lt; target {
-        return searchRec(nums, mid+1, high, target)
+    if arr[mid] &lt; target {
+        return firstOcc(arr, mid+1, high, target)
+    } else if arr[mid] &gt; target {
+        return firstOcc(arr, low, mid-1, target)
     } else {
-        return searchRec(nums, low, mid-1, target)
+        if mid == 0 || arr[mid] != arr[mid-1] {
+            return mid
+        }
+        return firstOcc(arr, low, mid-1, target)
     }
 }
+
+func lastOcc(arr []int, low, high, target int) int {
+    if low &gt; high {
+        return -1
+    }
+    mid := (low + high) / 2
+    if arr[mid] &lt; target {
+        return lastOcc(arr, mid+1, high, target)
+    } else if arr[mid] &gt; target {
+        return lastOcc(arr, low, mid-1, target)
+    } else {
+        if mid == len(arr)-1 || arr[mid] != arr[mid+1] {
+            return mid
+        }
+        return lastOcc(arr, low+1, high, target)
+    }
+}
+
 </code></pre>
                 
               
@@ -1233,7 +1178,7 @@ func searchRec(nums []int, low, high, target int) int {
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../array/count_inversion_in_array.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Count Inversion in An Array" rel="prev">
+        <a href="last_occu.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Last Occurance in Sorted Array" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1242,20 +1187,20 @@ func searchRec(nums []int, low, high, target int) int {
               <span class="md-footer__direction">
                 Previous
               </span>
-              Count Inversion in An Array
+              Last Occurance in Sorted Array
             </div>
           </div>
         </a>
       
       
         
-        <a href="first_occu.html" class="md-footer__link md-footer__link--next" aria-label="Next: First Occurance in Sorted Array" rel="next">
+        <a href="../sorting/introduction.html" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              First Occurance in Sorted Array
+              Introduction
             </div>
           </div>
           <div class="md-footer__button md-icon">
