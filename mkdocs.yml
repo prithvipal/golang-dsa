@@ -47,6 +47,7 @@ nav:
         - Last Occurance in Sorted Array: searching/last_occu.md
         - Count Occurance in Sorted Array: searching/count_occu.md
         - Count 1's in Sorted Array: searching/cound_ones.md
+        - Square Root: searching/sqr_root.md
     - Sorting:
         - Introduction: sorting/introduction.md
         - Bubble Sort: sorting/bubble_sort.md
