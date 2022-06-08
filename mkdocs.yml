@@ -49,6 +49,7 @@ nav:
         - Count 1's in Sorted Array: searching/cound_ones.md
         - Square Root: searching/sqr_root.md
         - Find Possition of Missing Number: searching/find_possition_missing_number.md
+        - Find in Sorted Rotated Array: searching/find_in_sorted_rotated_array.md
     - Sorting:
         - Introduction: sorting/introduction.md
         - Bubble Sort: sorting/bubble_sort.md
