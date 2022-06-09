@@ -1137,6 +1137,10 @@
 <strong>Output:</strong> 3</p>
 <p><strong>Input:</strong> arr[] = {100, 200, 400, 10, 20}, target=100 </br>
 <strong>Output:</strong> 0</p>
+<p><strong>Input:</strong> arr[] = {3, 1}, target=1 </br>
+<strong>Output:</strong> 1</p>
+<p><strong>Input:</strong> arr[] = {3, 1}, target=3 </br>
+<strong>Output:</strong> 0</p>
 <pre><code>package main
 
 import (
@@ -1151,28 +1155,43 @@ func main() {
     fmt.Println(res)
 }
 
-func searchInSortedRotatedArray(arr []int, target int) int {
+func searchInSortedRotatedArray(nums []int, target int) int {
     low := 0
-    high := len(arr) - 1
-    for low &lt;= high {
+    high := len(nums) - 1
+    // to find index of lowest value. The index where rotation's value start
+    for low &lt; high {
         mid := (low + high) / 2
-        if arr[mid] == target {
-            return mid
-        }
-        if arr[low] &lt; arr[mid] {
-            if arr[low] &lt; target &amp;&amp; target &lt; arr[mid] {
-                high = mid - 1
-            } else {
-                low = mid + 1
-            }
+        if nums[mid] &gt; nums[high] {
+            low = mid + 1
         } else {
-            if arr[mid] &lt; target &amp;&amp; target &lt; arr[high] {
-                low = mid + 1
-            } else {
-                high = mid - 1
-            }
+            high = mid
         }
     }
+
+    // setting new low and high based of array we have our element. Whether rotated sided or other side
+    rotIdx := low
+    low = 0
+    high = len(nums) - 1
+    if nums[rotIdx] == target {
+        return rotIdx
+    } else if nums[rotIdx] &lt; target &amp;&amp; target &lt;= nums[len(nums)-1] {
+        low = rotIdx + 1
+    } else {
+        high = rotIdx - 1
+    }
+
+    // normal binary search with new low and high
+    for low &lt;= high {
+        mid := (low + high) / 2
+        if nums[mid] == target {
+            return mid
+        } else if nums[mid] &lt; target {
+            low = mid + 1
+        } else {
+            high = mid - 1
+        }
+    }
+
     return -1
 }
 </code></pre>
