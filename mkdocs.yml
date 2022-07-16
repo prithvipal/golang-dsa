@@ -69,5 +69,6 @@ nav:
     - Greedy Algorithms:
         - Max Coin: greedy/max_coin.md
         - Max Activity: greedy/max_activity.md
+        - Fraction Knapsack: greedy/fraction_knapsack.md
     - About Author: about.md
 theme: material
