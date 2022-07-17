@@ -71,5 +71,7 @@ nav:
         - Max Activity: greedy/max_activity.md
         - Fraction Knapsack: greedy/fraction_knapsack.md
         - Job Sequence: greedy/job_sequence.md
+    - Heap: 
+        - Heap: heap/heap.md
     - About Author: about.md
 theme: material
