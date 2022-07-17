@@ -74,5 +74,6 @@ nav:
     - Heap: 
         - Heap: heap/heap.md
         - Descrease Key: heap/descrease_key.md
+        - Delete Element: heap/delete_ele.md
     - About Author: about.md
 theme: material
