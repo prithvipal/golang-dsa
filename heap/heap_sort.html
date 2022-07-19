@@ -14,7 +14,7 @@
     
     
       
-        <title>Second Largest Number from Given Number - Data Structures and Algorithms using Golang</title>
+        <title>Heap Sort - Data Structures and Algorithms using Golang</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#second-largest-number-from-given-number" class="md-skip">
+        <a href="#heap-sort" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Second Largest Number from Given Number
+              Heap Sort
             
           </span>
         </div>
@@ -1066,14 +1066,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       <label class="md-nav__link" for="__nav_9">
         Binary Search Tree
@@ -1089,51 +1087,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Second Largest Number from Given Number
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="second_largest_number_from_given_number.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bst/second_largest_number_from_given_number.html" class="md-nav__link">
         Second Largest Number from Given Number
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
-    Implementation
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1228,12 +1186,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
       
       <label class="md-nav__link" for="__nav_11">
         Heap
@@ -1251,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../heap/heap.html" class="md-nav__link">
+      <a href="heap.html" class="md-nav__link">
         Heap
       </a>
     </li>
@@ -1263,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../heap/descrease_key.html" class="md-nav__link">
+      <a href="descrease_key.html" class="md-nav__link">
         Descrease Key
       </a>
     </li>
@@ -1275,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../heap/delete_ele.html" class="md-nav__link">
+      <a href="delete_ele.html" class="md-nav__link">
         Delete Element
       </a>
     </li>
@@ -1287,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../heap/build_heap.html" class="md-nav__link">
+      <a href="build_heap.html" class="md-nav__link">
         Build Heap
       </a>
     </li>
@@ -1297,11 +1257,51 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../heap/heap_sort.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Heap Sort
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="heap_sort.html" class="md-nav__link md-nav__link--active">
         Heap Sort
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1372,65 +1372,74 @@
               
                 
                 
-                <h1 id="second-largest-number-from-given-number">Second Largest Number from Given Number</h1>
-<pre><code>          45
-        /    \
-      40       60
-    /   \      /  \ 
-  20     42   50   70
-</code></pre>
-<p>In given above tree, </br>
-if given number n as 70 then result should be 60 </br>
-if given number n as 60 then result should be 45 </br>
-if given number n as 43 then result should be 42 </br>
-if given number n as 15 then result should be NOT FOUND </br></p>
+                <h1 id="heap-sort">Heap Sort</h1>
 <h2 id="implementation">Implementation</h2>
-<pre><code class="language-golang">package main
+<pre><code>package main
 
 import &quot;fmt&quot;
 
-type Tree struct {
-    data  int
-    left  *Tree
-    right *Tree
+type Heap struct {
+    arr []int
+}
+
+func (mh *Heap) buildHeap() {
+    idx := (len(mh.arr) - 2) / 2
+    for i := idx; i &gt;= 0; i-- {
+        mh.maxHeapify(len(mh.arr), i)
+    }
+}
+
+func (mh *Heap) maxHeapify(size, idx int) {
+    leftIdx := left(idx)
+    rightIdx := right(idx)
+    minIdx := idx
+    if leftIdx &lt; size &amp;&amp; mh.arr[leftIdx] &gt; mh.arr[idx] {
+        minIdx = leftIdx
+    }
+    if rightIdx &lt; size &amp;&amp; mh.arr[rightIdx] &gt; mh.arr[minIdx] {
+        minIdx = rightIdx
+    }
+    if minIdx == idx {
+        return
+    }
+    mh.arr[minIdx], mh.arr[idx] = mh.arr[idx], mh.arr[minIdx]
+    mh.maxHeapify(size, minIdx)
+}
+
+func (mh *Heap) sort() {
+    mh.buildHeap()
+    for i := len(mh.arr) - 1; i &gt; 0; i-- {
+        mh.arr[i], mh.arr[0] = mh.arr[0], mh.arr[i]
+        mh.maxHeapify(i, 0)
+    }
+}
+
+func newMinHeap(heapArr []int) *Heap {
+    mh := &amp;Heap{
+        arr: make([]int, len(heapArr)),
+    }
+    copy(mh.arr, heapArr)
+    return mh
+}
+
+func left(i int) int {
+    return 2*i + 1
+}
+
+func right(i int) int {
+    return 2*i + 2
+}
+func parent(i int) int {
+    return (i - 1) / 2
 }
 
 func main() {
-    root := &amp;Tree{data: 45}
-    root.left = &amp;Tree{data: 40}
-    root.left.left = &amp;Tree{data: 20}
-    root.left.right = &amp;Tree{data: 42}
-
-    root.right = &amp;Tree{data: 60}
-    root.right.left = &amp;Tree{data: 50}
-    root.right.right = &amp;Tree{data: 70}
-    result := secondLarge(root, 80)
-    if result == nil {
-        fmt.Println(&quot;Not Found&quot;)
-    } else {
-        fmt.Println(*result)
-    }
-
+    minHeap := newMinHeap([]int{10, 5, 20, 2, 4, 8})
+    fmt.Println(minHeap.arr)
+    minHeap.sort()
+    fmt.Println(minHeap.arr)
 }
 
-func secondLarge(root *Tree, n int) *int {
-    if root == nil {
-        return nil
-    }
-    var result *int
-    if root.data &lt; n {
-        result = secondLarge(root.right, n)
-    } else if root.data &gt; n {
-        result = secondLarge(root.left, n)
-    }
-    if result == nil || *result &gt;= n {
-        if root.data &gt; n {
-            return nil
-        }
-        return &amp;root.data
-    }
-    return result
-}
 </code></pre>
                 
               
@@ -1451,7 +1460,7 @@ func secondLarge(root *Tree, n int) *int {
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../concurrency/print_odd_even_sequentially.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Print Odd and Even Sequentially using goroutine" rel="prev">
+        <a href="build_heap.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Build Heap" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1460,20 +1469,20 @@ func secondLarge(root *Tree, n int) *int {
               <span class="md-footer__direction">
                 Previous
               </span>
-              Print Odd and Even Sequentially using goroutine
+              Build Heap
             </div>
           </div>
         </a>
       
       
         
-        <a href="../greedy/max_coin.html" class="md-footer__link md-footer__link--next" aria-label="Next: Max Coin" rel="next">
+        <a href="../about.html" class="md-footer__link md-footer__link--next" aria-label="Next: About Author" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Max Coin
+              About Author
             </div>
           </div>
           <div class="md-footer__button md-icon">
