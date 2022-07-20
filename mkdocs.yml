@@ -79,5 +79,6 @@ nav:
         - Heap Sort: heap/heap_sort.md
         - Sort K Sorted Array: heap/sort_k_sorted_array.md
         - Buy Maximum Items by Given Sum: heap/buy_max_items.md
+        - K Largest Numbers: heap/k_largest_numbers.md
     - About Author: about.md
 theme: material
