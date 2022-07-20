@@ -77,5 +77,6 @@ nav:
         - Delete Element: heap/delete_ele.md
         - Build Heap: heap/build_heap.md
         - Heap Sort: heap/heap_sort.md
+        - Sort K Sorted Array: heap/sort_k_sorted_array.md
     - About Author: about.md
 theme: material
