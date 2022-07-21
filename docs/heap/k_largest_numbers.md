@@ -1,4 +1,4 @@
-# K Largest Numbers
+# K Largest Elements
 
 ## Implementation
 
