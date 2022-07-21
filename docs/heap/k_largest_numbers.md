@@ -2,6 +2,8 @@
 
 ## Implementation
 
+### Using Max Heap
+
 ```
 package main
 
@@ -11,12 +13,11 @@ type Heap struct {
 	arr []int
 }
 
-func (h *Heap) insert(ele int) {
-	h.arr = append(h.arr, ele)
-	i := len(h.arr) - 1
-	for i > 0 && h.arr[i] > h.arr[parent(i)] {
-		h.arr[i], h.arr[parent(i)] = h.arr[parent(i)], h.arr[i]
-		i = parent(i)
+func (h *Heap) buildHeap(arr []int) {
+	h.arr = arr
+	idx := (len(h.arr) - 2) / 2
+	for i := idx; i >= 0; i-- {
+		h.heapify(i)
 	}
 }
 
@@ -64,10 +65,8 @@ func parent(i int) int {
 
 func kLargestElements(arr []int, k int) []int {
 	res := make([]int, k)
-	heap := Heap{}
-	for _, ele := range arr {
-		heap.insert(ele)
-	}
+	heap := &Heap{}
+	heap.buildHeap(arr)
 	for i := k - 1; i >= 0; i-- {
 		res[i] = heap.pop()
 	}
@@ -76,8 +75,8 @@ func kLargestElements(arr []int, k int) []int {
 }
 
 func main() {
-	arr := []int{8, 6, 4, 10, 9}
-	res := kLargestElements(arr, 3)
+	arr := []int{18, 6, 4, 10, 99}
+	res := kLargestElements(arr, 2)
 	fmt.Println(res)
 }
 
