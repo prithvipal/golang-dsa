@@ -67,6 +67,7 @@ nav:
     - Binary Search Tree:
         - Search: bst/search.md
         - Insert: bst/insert.md
+        - Delete: bst/delete.md
         - Second Largest Number from Given Number: bst/second_largest_number_from_given_number.md
     - Greedy Algorithms:
         - Max Coin: greedy/max_coin.md
