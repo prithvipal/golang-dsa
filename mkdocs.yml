@@ -66,6 +66,7 @@ nav:
         - Print Odd and Even Sequentially using goroutine: concurrency/print_odd_even_sequentially.md
     - Binary Search Tree:
         - Search: bst/search.md
+        - Insert: bst/insert.md
         - Second Largest Number from Given Number: bst/second_largest_number_from_given_number.md
     - Greedy Algorithms:
         - Max Coin: greedy/max_coin.md
