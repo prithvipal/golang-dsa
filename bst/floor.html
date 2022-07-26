@@ -14,7 +14,7 @@
     
     
       
-        <title>Merge Sort - Data Structures and Algorithms using Golang</title>
+        <title>Floor of Number - Data Structures and Algorithms using Golang</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#merge-sort" class="md-skip">
+        <a href="#find-floor-of-given-number" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Merge Sort
+              Floor of Number
             
           </span>
         </div>
@@ -856,14 +856,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       <label class="md-nav__link" for="__nav_6">
         Sorting
@@ -881,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="introduction.html" class="md-nav__link">
+      <a href="../sorting/introduction.html" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -893,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="bubble_sort.html" class="md-nav__link">
+      <a href="../sorting/bubble_sort.html" class="md-nav__link">
         Bubble Sort
       </a>
     </li>
@@ -905,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="selection_sort.html" class="md-nav__link">
+      <a href="../sorting/selection_sort.html" class="md-nav__link">
         Selection Sort
       </a>
     </li>
@@ -917,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="insertion_sort.html" class="md-nav__link">
+      <a href="../sorting/insertion_sort.html" class="md-nav__link">
         Insertion Sort
       </a>
     </li>
@@ -927,132 +925,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Merge Sort
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="merge_sort.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../sorting/merge_sort.html" class="md-nav__link">
         Merge Sort
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merge-two-sorted-array" class="md-nav__link">
-    Merge Two Sorted Array
-  </a>
-  
-    <nav class="md-nav" aria-label="Merge Two Sorted Array">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#naive-solution" class="md-nav__link">
-    Naive Solution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#efficient-solution" class="md-nav__link">
-    Efficient Solution
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merge-function-of-merge-sort" class="md-nav__link">
-    Merge Function of Merge Sort
-  </a>
-  
-    <nav class="md-nav" aria-label="Merge Function of Merge Sort">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#implementation-idea" class="md-nav__link">
-    Implementation Idea
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
-    Implementation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merge-sort-algorithm" class="md-nav__link">
-    Merge Sort Algorithm
-  </a>
-  
-    <nav class="md-nav" aria-label="Merge Sort Algorithm">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#explaination" class="md-nav__link">
-    Explaination
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merge-sort-analysis" class="md-nav__link">
-    Merge Sort Analysis
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1062,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quick_sort.html" class="md-nav__link">
+      <a href="../sorting/quick_sort.html" class="md-nav__link">
         Quick Sort
       </a>
     </li>
@@ -1189,12 +1066,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
       
       <label class="md-nav__link" for="__nav_9">
         Binary Search Tree
@@ -1212,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bst/search.html" class="md-nav__link">
+      <a href="search.html" class="md-nav__link">
         Search
       </a>
     </li>
@@ -1224,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bst/insert.html" class="md-nav__link">
+      <a href="insert.html" class="md-nav__link">
         Insert
       </a>
     </li>
@@ -1236,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bst/delete.html" class="md-nav__link">
+      <a href="delete.html" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -1246,11 +1125,71 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../bst/floor.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Floor of Number
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="floor.html" class="md-nav__link md-nav__link--active">
         Floor of Number
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursive" class="md-nav__link">
+    Recursive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterative" class="md-nav__link">
+    Iterative
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1260,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bst/second_largest_number_from_given_number.html" class="md-nav__link">
+      <a href="second_largest_number_from_given_number.html" class="md-nav__link">
         Second Largest Number from Given Number
       </a>
     </li>
@@ -1530,90 +1469,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merge-two-sorted-array" class="md-nav__link">
-    Merge Two Sorted Array
-  </a>
-  
-    <nav class="md-nav" aria-label="Merge Two Sorted Array">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#naive-solution" class="md-nav__link">
-    Naive Solution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#efficient-solution" class="md-nav__link">
-    Efficient Solution
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merge-function-of-merge-sort" class="md-nav__link">
-    Merge Function of Merge Sort
-  </a>
-  
-    <nav class="md-nav" aria-label="Merge Function of Merge Sort">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#implementation-idea" class="md-nav__link">
-    Implementation Idea
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#implementation" class="md-nav__link">
     Implementation
   </a>
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merge-sort-algorithm" class="md-nav__link">
-    Merge Sort Algorithm
-  </a>
-  
-    <nav class="md-nav" aria-label="Merge Sort Algorithm">
+    <nav class="md-nav" aria-label="Implementation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#explaination" class="md-nav__link">
-    Explaination
+  <a href="#recursive" class="md-nav__link">
+    Recursive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterative" class="md-nav__link">
+    Iterative
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merge-sort-analysis" class="md-nav__link">
-    Merge Sort Analysis
-  </a>
   
 </li>
       
@@ -1630,209 +1508,76 @@
               
                 
                 
-                <h1 id="merge-sort">Merge Sort</h1>
-<h2 id="introduction">Introduction</h2>
-<ul>
-<li>Divide and Conquer Algorithm<ul>
-<li>Divide</li>
-<li>Conquer</li>
-<li>Merge</li>
-</ul>
-</li>
-<li>Stable Algorithm</li>
-<li>&theta;(n log n) time and O(n) aux space</li>
-<li>Well suited for linked list. Works in O(1) aux space</li>
-<li>Used in external sorting</li>
-<li>In generate for array. Quick sort outperforms it.</li>
-</ul>
-<h2 id="merge-two-sorted-array">Merge Two Sorted Array</h2>
-<p><strong>Input:</strong> a[] = {12, 17, 22} </br>
-b[] = {7, 8, 8, 17} </br>
-<strong>Ouput:</strong> c[] = {7, 8, 8, 12, 17, 22} </br>
-</br></p>
-<p><strong>Input:</strong> a[] = {11, 11, 22} </br>
-b[] = {33} </br>
-<strong>Ouput:</strong> c[] = {11, 11, 22, 33} </br></p>
-<h3 id="naive-solution">Naive Solution</h3>
+                <h1 id="find-floor-of-given-number">Find Floor of Given Number</h1>
+<h2 id="implementation">Implementation</h2>
+<h3 id="recursive">Recursive</h3>
 <pre><code>package main
-
-import (
-    &quot;fmt&quot;
-    &quot;sort&quot;
-)
-
-type Person struct {
-    id   int
-    name string
-}
-
-func main() {
-    a := []int{10, 15, 20, 20}
-    b := []int{1, 2, 13}
-    c := merge(a, b)
-    fmt.Println(c)
-}
-
-func merge(a []int, b []int) []int {
-    c := make([]int, len(a)+len(b))
-    for i, ele := range a {
-        c[i] = ele
-    }
-    for i, ele := range b {
-        c[len(a)+i] = ele
-    }
-    sort.Ints(c)
-    return c
-}
-</code></pre>
-<p><strong>Time Complexity:</strong> O((m+n) log(m+n)) </br>
-<strong>Space Complexity:</strong> &theta;(m+n)</p>
-<p><strong>Dry Run:</strong> </br>
-a[] = {10, 15, 20, 20} </br>
-b[] = {1, 2, 13} </br></p>
-<p><em>After 1st Loop:</em> c[] = {10, 15, 20, 20, <em>, </em>, _} </br>
-<em>After 2st Loop:</em> c[] = {10, 15, 20, 20, 1, 2, 13} </br>
-<em>After Sorting:</em> c[] = {1, 2, 10, 13, 15, 20, 20} </br></p>
-<h3 id="efficient-solution">Efficient Solution</h3>
-<p><img alt="" src="docs/merge_sorted_array.png" /></p>
-<p>Initially i=0, j =0</p>
-<p>if a[i] &lt;= b[j] { append a[i]; i++} </br>
-else append b[j]; j++</p>
-<pre><code class="language-golang">package main
 
 import &quot;fmt&quot;
 
+type Tree struct {
+    data  int
+    left  *Tree
+    right *Tree
+}
+
 func main() {
-    a := []int{5, 10, 15, 20}
-    b := []int{10, 20, 30}
-    res := merge(a, b)
-    fmt.Println(res)
+    root := &amp;Tree{
+        data: 50,
+        left: &amp;Tree{
+            data: 30,
+            left: &amp;Tree{
+                data: 20,
+            },
+            right: &amp;Tree{
+                data: 40,
+            },
+        },
+        right: &amp;Tree{
+            data: 70,
+            left: &amp;Tree{
+                data: 60,
+                left: &amp;Tree{
+                    data: 55,
+                },
+                right: &amp;Tree{
+                    data: 65,
+                },
+            },
+            right: &amp;Tree{
+                data: 80,
+            },
+        }}
+
+    res := findFloor(root, 51)
+    if res != nil {
+        fmt.Println(*res)
+    } else {
+        fmt.Println(res)
+    }
+
 }
 
-func merge(a []int, b []int) (result []int) {
-    i := 0
-    j := 0
-    for i &lt; len(a) &amp;&amp; j &lt; len(b) {
-        if a[i] &lt;= b[j] {
-            result = append(result, a[i])
-            i++
-        } else {
-            result = append(result, b[j])
-            j++
+func findFloor(root *Tree, val int) *int {
+    if root == nil {
+        return nil
+    }
+    if root.data == val {
+        return &amp;val
+    } else if root.data &lt; val {
+        res := findFloor(root.right, val)
+        if res == nil {
+            return &amp;root.data
         }
+        return res
+    } else {
+        return findFloor(root.left, val)
     }
 
-    for i &lt; len(a) {
-        result = append(result, a[i])
-        i++
-    }
-    for j &lt; len(b) {
-        result = append(result, b[j])
-        j++
-    }
-    return
-}
-</code></pre>
-<p><strong>Time Complexity:</strong> &theta;(m+n)</p>
-<p><strong>Dry Run:</strong></br>
-a := {5, 10, 15, 20} </br>
-b := {10, 20, 30}</p>
-<p><em>First Loop</em></br>
-i=0, j=0 </br>
-c[]={5}  i=1 </br>
-c[]={5, 10}  i=2 </br>
-c[]={5, 10, 10}  j=1 </br>
-c[]={5, 10, 10, 15}  i=3 </br>
-c[]={5, 10, 10, 15, 20}  i=4 </br></p>
-<p><em>Second Loop</em> </br>
-Nothing</p>
-<p><em>Third Loop</em> </br>
-c[]={5, 10, 10, 15, 20, 20}  j=2 </br>
-c[]={5, 10, 10, 15, 20, 20, 30}  j=3 </br></p>
-<h2 id="merge-function-of-merge-sort">Merge Function of Merge Sort</h2>
-<p><strong>Input:</strong> a[] = {12, 15, 22, 13, 32}</br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|---------|  &nbsp; &nbsp; |-----| </br>
-low = 0 </br>
-mid = 2 </br>
-high = 4 </br></p>
-<p><strong>Output:</strong> a[] = {12, 13, 17 , 22, 32}
-</br></p>
-<p><strong>Input:</strong> a[] = {7, 10, 12, 14, 9}<br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|-------------| &nbsp;|--| </br>
-low = 0 </br>
-mid = 3 </br>
-high = 4 </br></p>
-<p><strong>Output:</strong> a[] = {7, 10, 12, 14, 9}</p>
-<p><img alt="" src="docs/merge_function_of_merge_sort.png" /></p>
-<h3 id="implementation-idea">Implementation Idea</h3>
-<p>a[] = {13, 18, 21, 45, 10, 15, 80}</br>
-low = 0 </br>
-mid = 3 </br>
-high = 6 </br>
-left[] = {13, 18, 21, 45} </br>
-right[] = { 10, 15, 80}</br></p>
-<p><em>merge left and right array</em> <br>
-a[] = {10, 13, 15, 18, 21, 45, 80}</p>
-<h3 id="implementation">Implementation</h3>
-<pre><code class="language-golang">func merge(a []int, low int, mid int, high int) {
-
-    // Setting up auxilary array
-    n1 := mid - low + 1
-    n2 := high - mid
-    left := make([]int, n1)
-    right := make([]int, n2)
-    for i := 0; i &lt; n1; i++ {
-        left[i] = a[low+i]
-    }
-    for i := 0; i &lt; n2; i++ {
-        right[i] = a[mid+i+1]
-    }
-
-    // standard merge logic
-
-    i := 0
-    j := 0
-    k := low
-    for i &lt; n1 &amp;&amp; j &lt; n2 {
-        if left[i] &lt; right[j] {
-            a[k] = left[i]
-            i++
-            k++
-        } else {
-            a[k] = right[j]
-            k++
-            j++
-        }
-    }
-    for i &lt; n1 {
-        a[k] = left[i]
-        k++
-        i++
-    }
-    for j &lt; n2 {
-        a[k] = right[j]
-        k++
-        j++
-    }
 }
 
 </code></pre>
-<p><strong>Time complexity:</strong> &theta;(n) </br>
-<strong>Aux Space:</strong> &theta;(n) </p>
-<h2 id="merge-sort-algorithm">Merge Sort Algorithm</h2>
-<pre><code class="language-golang">func mergeSort(arr []int, l, r int) {
-    if r &gt; l { // atleast 2 elements
-        m := (l + r) / 2
-        mergeSort(arr, l, m)
-        mergeSort(arr, m+1, r)
-        merge(arr, l, m, r)
-    }
-}
-</code></pre>
-<h3 id="explaination">Explaination</h3>
-<p><img alt="" src="docs/merge_sort_algo.png" /></p>
-<h2 id="merge-sort-analysis">Merge Sort Analysis</h2>
-<p><img alt="" src="docs/merge_sort_analysis.png" /></p>
+<h3 id="iterative">Iterative</h3>
                 
               
               
@@ -1852,7 +1597,7 @@ a[] = {10, 13, 15, 18, 21, 45, 80}</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="insertion_sort.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Insertion Sort" rel="prev">
+        <a href="delete.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Delete" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1861,20 +1606,20 @@ a[] = {10, 13, 15, 18, 21, 45, 80}</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Insertion Sort
+              Delete
             </div>
           </div>
         </a>
       
       
         
-        <a href="quick_sort.html" class="md-footer__link md-footer__link--next" aria-label="Next: Quick Sort" rel="next">
+        <a href="second_largest_number_from_given_number.html" class="md-footer__link md-footer__link--next" aria-label="Next: Second Largest Number from Given Number" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Quick Sort
+              Second Largest Number from Given Number
             </div>
           </div>
           <div class="md-footer__button md-icon">
