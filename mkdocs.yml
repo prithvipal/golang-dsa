@@ -68,6 +68,7 @@ nav:
         - Traversal: tree/traversal.md
         - Heigth Of Tree: tree/height.md
         - Print Nodes a K Distance: tree/nodes_at_k_distance.md
+        - Level Order Traversal: tree/level_order_traversal.md
     - Binary Search Tree(BST):
         - Search: bst/search.md
         - Insert: bst/insert.md
