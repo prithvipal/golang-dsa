@@ -1166,6 +1166,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#level-order-traversal-line-by-line" class="md-nav__link">
+    Level Order Traversal Line by Line
+  </a>
+  
+    <nav class="md-nav" aria-label="Level Order Traversal Line by Line">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation_1" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1545,6 +1565,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#level-order-traversal-line-by-line" class="md-nav__link">
+    Level Order Traversal Line by Line
+  </a>
+  
+    <nav class="md-nav" aria-label="Level Order Traversal Line by Line">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation_1" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1559,7 +1599,7 @@
                 
                 
                 <h1 id="level-order-traversal">Level Order Traversal</h1>
-<h2 id="implementation">Implementation</h2>
+<h3 id="implementation">Implementation</h3>
 <pre><code>package main
 
 import &quot;fmt&quot;
@@ -1568,11 +1608,6 @@ type TreeNode struct {
     Val   int
     Left  *TreeNode
     Right *TreeNode
-}
-
-type ListNode struct {
-    Val  int
-    Next *ListNode
 }
 
 func main() {
@@ -1617,6 +1652,73 @@ func levelOrderTraversal(root *TreeNode) {
             queue = append(queue, ele.Right)
         }
         queue = queue[1:]
+    }
+}
+
+</code></pre>
+<h2 id="level-order-traversal-line-by-line">Level Order Traversal Line by Line</h2>
+<h3 id="implementation_1">Implementation</h3>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+type TreeNode struct {
+    Val   int
+    Left  *TreeNode
+    Right *TreeNode
+}
+
+
+func main() {
+    root := &amp;TreeNode{
+        Val: 10,
+        Left: &amp;TreeNode{
+            Val: 20,
+            Left: &amp;TreeNode{
+                Val: 40,
+            },
+            Right: &amp;TreeNode{
+                Val: 50,
+                Left: &amp;TreeNode{
+                    Val: 70,
+                },
+                Right: &amp;TreeNode{
+                    Val: 80,
+                },
+            },
+        },
+        Right: &amp;TreeNode{
+            Val: 30,
+            Right: &amp;TreeNode{
+                Val: 60,
+            },
+        },
+    }
+
+    levelOrderTraversalLineByLine(root)
+}
+
+func levelOrderTraversalLineByLine(root *TreeNode) {
+    queue := []*TreeNode{}
+    queue = append(queue, root)
+    queue = append(queue, nil)
+
+    for len(queue) &gt; 1 {
+        ele := queue[0]
+        queue = queue[1:]
+        if ele == nil {
+            fmt.Println()
+            queue = append(queue, nil)
+            continue
+        }
+        fmt.Printf(&quot;%v &quot;, ele.Val)
+        if ele.Left != nil {
+            queue = append(queue, ele.Left)
+        }
+        if ele.Right != nil {
+            queue = append(queue, ele.Right)
+        }
+
     }
 }
 
