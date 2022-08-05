@@ -64,7 +64,9 @@ nav:
         - Add One in Lisked List Digit: linked_list/add_one_linked_list_digit.md
     - Concurrency:
         - Print Odd and Even Sequentially using goroutine: concurrency/print_odd_even_sequentially.md
-    - Binary Search Tree:
+    - Tree:
+        - Traversal: tree/traversal.md
+    - Binary Search Tree(BST):
         - Search: bst/search.md
         - Insert: bst/insert.md
         - Delete: bst/delete.md
