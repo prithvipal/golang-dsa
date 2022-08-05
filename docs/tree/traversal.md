@@ -115,7 +115,7 @@ func preorder(root *TreeNode) {
 
 ```
 
-## Post Order 
+## Post Order Traversal
 
 ### Implementation
 
