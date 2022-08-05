@@ -14,7 +14,7 @@
     
     
       
-        <title>Delete - Data Structures and Algorithms using Golang</title>
+        <title>Traversal - Data Structures and Algorithms using Golang</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#delete-from-bst" class="md-skip">
+        <a href="#tree-traversal" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Delete
+              Traversal
             
           </span>
         </div>
@@ -1066,12 +1066,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
       
       <label class="md-nav__link" for="__nav_9">
         Tree
@@ -1083,74 +1085,6 @@
           Tree
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tree/traversal.html" class="md-nav__link">
-        Traversal
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
-      
-      <label class="md-nav__link" for="__nav_10">
-        Binary Search Tree(BST)
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Binary Search Tree(BST)" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
-          <span class="md-nav__icon md-icon"></span>
-          Binary Search Tree(BST)
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="search.html" class="md-nav__link">
-        Search
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="insert.html" class="md-nav__link">
-        Insert
-      </a>
-    </li>
-  
-
           
             
   
@@ -1167,12 +1101,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Delete
+          Traversal
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="delete.html" class="md-nav__link md-nav__link--active">
-        Delete
+      <a href="traversal.html" class="md-nav__link md-nav__link--active">
+        Traversal
       </a>
       
         
@@ -1190,9 +1124,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#inorder-traversal" class="md-nav__link">
+    Inorder Traversal
+  </a>
+  
+    <nav class="md-nav" aria-label="Inorder Traversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#implementation" class="md-nav__link">
     Implementation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preorder-traversal" class="md-nav__link">
+    Preorder Traversal
+  </a>
+  
+    <nav class="md-nav" aria-label="Preorder Traversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation_1" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-order" class="md-nav__link">
+    Post Order
+  </a>
+  
+    <nav class="md-nav" aria-label="Post Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation_2" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1204,12 +1191,78 @@
   
 
           
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        Binary Search Tree(BST)
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Binary Search Tree(BST)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Binary Search Tree(BST)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
             
   
   
   
     <li class="md-nav__item">
-      <a href="floor.html" class="md-nav__link">
+      <a href="../bst/search.html" class="md-nav__link">
+        Search
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bst/insert.html" class="md-nav__link">
+        Insert
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bst/delete.html" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bst/floor.html" class="md-nav__link">
         Floor of Number
       </a>
     </li>
@@ -1221,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ceil.html" class="md-nav__link">
+      <a href="../bst/ceil.html" class="md-nav__link">
         Ceil of Number
       </a>
     </li>
@@ -1233,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="second_largest_number_from_given_number.html" class="md-nav__link">
+      <a href="../bst/second_largest_number_from_given_number.html" class="md-nav__link">
         Second Largest Number from Given Number
       </a>
     </li>
@@ -1503,9 +1556,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#inorder-traversal" class="md-nav__link">
+    Inorder Traversal
+  </a>
+  
+    <nav class="md-nav" aria-label="Inorder Traversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#implementation" class="md-nav__link">
     Implementation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preorder-traversal" class="md-nav__link">
+    Preorder Traversal
+  </a>
+  
+    <nav class="md-nav" aria-label="Preorder Traversal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation_1" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-order" class="md-nav__link">
+    Post Order
+  </a>
+  
+    <nav class="md-nav" aria-label="Post Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation_2" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1522,72 +1628,166 @@
               
                 
                 
-                <h1 id="delete-from-bst">Delete from BST</h1>
-<h2 id="implementation">Implementation</h2>
+                <h1 id="tree-traversal">Tree Traversal</h1>
+<h2 id="inorder-traversal">Inorder Traversal</h2>
+<h3 id="implementation">Implementation</h3>
 <pre><code>package main
 
 import &quot;fmt&quot;
 
-type Tree struct {
-    data  int
-    left  *Tree
-    right *Tree
+type TreeNode struct {
+    Val   int
+    Left  *TreeNode
+    Right *TreeNode
+}
+
+type ListNode struct {
+    Val  int
+    Next *ListNode
 }
 
 func main() {
-    root := &amp;Tree{
-        data: 15,
-        left: &amp;Tree{
-            data: 5,
-            left: &amp;Tree{
-                data: 3,
-            }},
-        right: &amp;Tree{
-            data: 20,
-            left: &amp;Tree{
-                data: 18,
-                left: &amp;Tree{
-                    data: 16,
+    root := &amp;TreeNode{
+        Val: 10,
+        Left: &amp;TreeNode{
+            Val: 20,
+            Left: &amp;TreeNode{
+                Val: 40,
+            },
+            Right: &amp;TreeNode{
+                Val: 50,
+                Left: &amp;TreeNode{
+                    Val: 70,
+                },
+                Right: &amp;TreeNode{
+                    Val: 80,
                 },
             },
-            right: &amp;Tree{
-                data: 80,
+        },
+        Right: &amp;TreeNode{
+            Val: 30,
+            Right: &amp;TreeNode{
+                Val: 60,
             },
-        }}
-
-    res := delete(root, 15)
-    fmt.Printf(&quot;%+v&quot;, res)
+        },
+    }
+    inorder(root)
 }
 
-func delete(root *Tree, val int) *Tree {
-    if root == nil {
-        return nil
+func inorder(root *TreeNode) {
+    if root != nil {
+        inorder(root.Left)
+        fmt.Println(root.Val)
+        inorder(root.Right)
     }
-    if val &lt; root.data {
-        root.left = delete(root.left, val)
-
-    } else if val &gt; root.data {
-        root.right = delete(root.right, val)
-    } else {
-        if root.left == nil {
-            return root.right
-        } else if root.right == nil {
-            return root.left
-        } else {
-            succ := getSuccesor(root)
-            root.data = succ.data
-            delete(root.right, succ.data)
-        }
-    }
-    return root
 }
 
-func getSuccesor(root *Tree) *Tree {
-    curr := root.right
-    for curr != nil &amp;&amp; curr.left != nil {
-        curr = curr.left
+</code></pre>
+<h2 id="preorder-traversal">Preorder Traversal</h2>
+<h3 id="implementation_1">Implementation</h3>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+type TreeNode struct {
+    Val   int
+    Left  *TreeNode
+    Right *TreeNode
+}
+
+type ListNode struct {
+    Val  int
+    Next *ListNode
+}
+
+func main() {
+    root := &amp;TreeNode{
+        Val: 10,
+        Left: &amp;TreeNode{
+            Val: 20,
+            Left: &amp;TreeNode{
+                Val: 40,
+            },
+            Right: &amp;TreeNode{
+                Val: 50,
+                Left: &amp;TreeNode{
+                    Val: 70,
+                },
+                Right: &amp;TreeNode{
+                    Val: 80,
+                },
+            },
+        },
+        Right: &amp;TreeNode{
+            Val: 30,
+            Right: &amp;TreeNode{
+                Val: 60,
+            },
+        },
     }
-    return curr
+    preorder(root)
+}
+
+func preorder(root *TreeNode) {
+    if root != nil {
+        fmt.Println(root.Val)
+        preorder(root.Left)
+        preorder(root.Right)
+    }
+}
+
+</code></pre>
+<h2 id="post-order">Post Order</h2>
+<h3 id="implementation_2">Implementation</h3>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+type TreeNode struct {
+    Val   int
+    Left  *TreeNode
+    Right *TreeNode
+}
+
+type ListNode struct {
+    Val  int
+    Next *ListNode
+}
+
+func main() {
+    root := &amp;TreeNode{
+        Val: 10,
+        Left: &amp;TreeNode{
+            Val: 20,
+            Left: &amp;TreeNode{
+                Val: 40,
+            },
+            Right: &amp;TreeNode{
+                Val: 50,
+                Left: &amp;TreeNode{
+                    Val: 70,
+                },
+                Right: &amp;TreeNode{
+                    Val: 80,
+                },
+            },
+        },
+        Right: &amp;TreeNode{
+            Val: 30,
+            Right: &amp;TreeNode{
+                Val: 60,
+            },
+        },
+    }
+    postorder(root)
+}
+
+func postorder(root *TreeNode) {
+    if root != nil {
+        postorder(root.Left)
+        postorder(root.Right)
+        fmt.Println(root.Val)
+    }
 }
 
 </code></pre>
@@ -1610,7 +1810,7 @@ func getSuccesor(root *Tree) *Tree {
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="insert.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Insert" rel="prev">
+        <a href="../concurrency/print_odd_even_sequentially.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Print Odd and Even Sequentially using goroutine" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1619,20 +1819,20 @@ func getSuccesor(root *Tree) *Tree {
               <span class="md-footer__direction">
                 Previous
               </span>
-              Insert
+              Print Odd and Even Sequentially using goroutine
             </div>
           </div>
         </a>
       
       
         
-        <a href="floor.html" class="md-footer__link md-footer__link--next" aria-label="Next: Floor of Number" rel="next">
+        <a href="../bst/search.html" class="md-footer__link md-footer__link--next" aria-label="Next: Search" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Floor of Number
+              Search
             </div>
           </div>
           <div class="md-footer__button md-icon">
