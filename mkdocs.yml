@@ -3,6 +3,7 @@ nav:
     - Home: index.md
     - Bit Manipulations:
         - Addition: bit_manipulation/addition.md
+        - 2's Complement: bit_manipulation/2s_complement.md
     - Simple:
         - Count Digits: simple/count_digit.md
         - Palindrome Numbers: simple/palindrome_numbers.md
